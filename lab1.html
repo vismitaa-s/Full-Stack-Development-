@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Paws - Pet Care Service</title>
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #33251f;
+
+            /*
+              YOUR IMAGE
+              bg_image.jpg must be in
+              the same folder as index.html
+            */
+
+            background-image:
+                linear-gradient(
+                    rgba(255, 248, 240, 0.42),
+                    rgba(255, 248, 240, 0.42)
+                ),
+                url("bg_image.jpg");
+
+            background-size: cover;
+
+            background-position: center center;
+
+            background-attachment: fixed;
+
+            background-repeat: no-repeat;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background-color: rgba(244, 119, 60, 0.92);
+
+            color: white;
+
+            padding: 20px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 30px;
+        }
+
+        header p {
+            margin-top: 4px;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+
+            min-height: 520px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 60px 10%;
+
+            /*
+              Transparent white box behind
+              the hero text
+            */
+
+            background-color: rgba(255, 255, 255, 0.30);
+        }
+
+        .hero-content {
+
+            max-width: 560px;
+
+            background-color: rgba(255, 255, 255, 0.72);
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero h2 {
+
+            font-size: 52px;
+
+            line-height: 1.1;
+
+            color: #543b2d;
+
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+
+            font-size: 20px;
+
+            line-height: 1.6;
+
+            margin-bottom: 28px;
+        }
+
+        .button {
+
+            display: inline-block;
+
+            background-color: #f4773c;
+
+            color: white;
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+
+            background-color: #d85d29;
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           ALL SECTIONS
+        ========================= */
+
+        section {
+
+            padding: 70px 8%;
+
+            text-align: center;
+        }
+
+        section h2 {
+
+            font-size: 34px;
+
+            color: #543b2d;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        #services {
+
+            /*
+              Very transparent so that
+              background image remains visible
+            */
+
+            background-color: rgba(255, 255, 255, 0.58);
+        }
+
+        .services {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        article {
+
+            width: 300px;
+
+            background-color: rgba(255, 255, 255, 0.90);
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.18);
+
+            transition: 0.3s;
+        }
+
+        article:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        article img {
+
+            width: 100%;
+
+            height: 190px;
+
+            object-fit: cover;
+        }
+
+        .article-content {
+
+            padding: 22px;
+        }
+
+        article h3 {
+
+            color: #f4773c;
+
+            font-size: 21px;
+
+            margin-bottom: 10px;
+        }
+
+        article p {
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        #about {
+
+            background-color: rgba(255, 248, 235, 0.60);
+        }
+
+        .about-container {
+
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 50px;
+
+            text-align: left;
+
+            background-color: rgba(255, 255, 255, 0.65);
+
+            padding: 35px;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .about-container img {
+
+            width: 420px;
+
+            height: 280px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+        }
+
+        .about-text {
+
+            flex: 1;
+        }
+
+        .about-text h2 {
+
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        #contact {
+
+            background-color: rgba(235, 245, 220, 0.62);
+        }
+
+        .contact {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .contact-box {
+
+            width: 240px;
+
+            padding: 28px;
+
+            background-color: rgba(255, 255, 255, 0.88);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-box h3 {
+
+            color: #f4773c;
+
+            margin-bottom: 10px;
+        }
+
+        .contact-box p {
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background-color: rgba(41, 49, 61, 0.94);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                text-align: center;
+            }
+
+            nav {
+
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero {
+
+                min-height: 500px;
+
+                padding: 30px 6%;
+            }
+
+            .hero-content {
+
+                padding: 30px;
+            }
+
+            .hero h2 {
+
+                font-size: 38px;
+            }
+
+            .hero p {
+
+                font-size: 17px;
+            }
+
+            .about-container {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .about-container img {
+
+                width: 100%;
+
+                height: 250px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <div>
+
+            <h1>🐾 Happy Paws</h1>
+
+            <p>Pet Care Service</p>
+
+        </div>
+
+
+        <!-- Navigation Menu -->
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#about">About Us</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main>
+
+
+        <!-- =========================
+             HERO SECTION
+        ========================= -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <h2>
+                    Quality Care
+                    <br>
+                    for Your Pets
+                </h2>
+
+                <p>
+                    Professional, loving and reliable
+                    pet care services for your furry friends.
+                </p>
+
+                <a href="#contact" class="button">
+                    Book a Service →
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SERVICES SECTION
+        ========================= -->
+
+        <section id="services">
+
+            <h2>🐾 Our Services 🐾</h2>
+
+            <div class="services">
+
+
+                <!-- DOG WALKING -->
+
+                <article>
+
+                    <img
+                        src="dog_walking.jpg"
+                        alt="Dog Walking">
+
+                    <div class="article-content">
+
+                        <h3>🐕 Dog Walking</h3>
+
+                        <p>
+                            Safe and enjoyable walks to keep
+                            your dogs active, happy and healthy.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PET GROOMING -->
+
+                <article>
+
+                    <img
+                        src="pet_grooming.webp"
+                        alt="Pet Grooming">
+
+                    <div class="article-content">
+
+                        <h3>🛁 Pet Grooming</h3>
+
+                        <p>
+                            Professional bathing, grooming
+                            and cleaning services for your pets.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PET SITTING -->
+
+                <article>
+
+                    <img
+                        src="pet_sitting.jpg"
+                        alt="Pet Sitting">
+
+                    <div class="article-content">
+
+                        <h3>🏠 Pet Sitting</h3>
+
+                        <p>
+                            Reliable and loving pet sitting
+                            while you are away from home.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================= -->
+
+        <section id="about">
+
+            <div class="about-container">
+
+                <img
+                    src="bg_image.jpg"
+                    alt="Happy Pets">
+
+                <div class="about-text">
+
+                    <h2>🐾 About Us 🐾</h2>
+
+                    <p>
+                        Happy Paws is a trusted pet care service
+                        dedicated to providing loving and professional
+                        care for pets.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Our trained staff ensure that every pet
+                        receives the attention, love and care
+                        they deserve.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT SECTION
+        ========================= -->
+
+        <section id="contact">
+
+            <h2>🐾 Contact Us 🐾</h2>
+
+            <div class="contact">
+
+
+                <div class="contact-box">
+
+                    <h3>📧 Email</h3>
+
+                    <p>
+                        happypaws@example.com
+                    </p>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <h3>📞 Phone</h3>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <h3>📍 Location</h3>
+
+                    <p>
+                        Coimbatore, Tamil Nadu
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Happy Paws Pet Care Service.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+
