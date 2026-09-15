@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube - Home</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+
+        <div class="max-w-screen-2xl mx-auto px-4">
+
+            <div class="h-16 flex items-center justify-between">
+
+                <!-- Left Section -->
+                <div class="flex items-center gap-4">
+
+                    <!-- Menu Button -->
+                    <button class="text-2xl hover:bg-gray-100 rounded-full p-2">
+                        ☰
+                    </button>
+
+                    <!-- YouTube Logo -->
+                    <div class="flex items-center gap-1">
+                        <div class="bg-red-600 text-white rounded-lg px-2 py-1">
+                            ▶
+                        </div>
+
+                        <span class="text-xl font-bold tracking-tight">
+                            YouTube
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- Search Bar -->
+                <div class="hidden sm:flex flex-1 max-w-2xl mx-8">
+
+                    <div class="flex w-full">
+
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            class="w-full border border-gray-300 rounded-l-full px-5 py-2.5 focus:outline-none focus:border-blue-500"
+                        >
+
+                        <button
+                            class="bg-gray-100 border border-l-0 border-gray-300 rounded-r-full px-6 hover:bg-gray-200">
+                            🔍
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right Section -->
+                <div class="flex items-center gap-2 sm:gap-4">
+
+                    <button class="text-xl p-2 hover:bg-gray-100 rounded-full">
+                        📹
+                    </button>
+
+                    <button class="text-xl p-2 hover:bg-gray-100 rounded-full">
+                        🔔
+                    </button>
+
+                    <div class="w-9 h-9 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">
+                        U
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <div class="max-w-screen-2xl mx-auto flex">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="hidden md:block w-60 min-h-screen border-r border-gray-200 p-4">
+
+            <div class="space-y-2">
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 bg-gray-100 rounded-xl font-medium">
+                    🏠
+                    <span>Home</span>
+                </a>
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 hover:bg-gray-100 rounded-xl">
+                    🎬
+                    <span>Shorts</span>
+                </a>
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 hover:bg-gray-100 rounded-xl">
+                    📺
+                    <span>Subscriptions</span>
+                </a>
+
+                <hr class="my-4">
+
+                <h3 class="font-semibold px-4 mb-2">
+                    You
+                </h3>
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 hover:bg-gray-100 rounded-xl">
+                    📜
+                    <span>History</span>
+                </a>
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 hover:bg-gray-100 rounded-xl">
+                    📋
+                    <span>Playlists</span>
+                </a>
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 hover:bg-gray-100 rounded-xl">
+                    ⏰
+                    <span>Watch Later</span>
+                </a>
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 hover:bg-gray-100 rounded-xl">
+                    👍
+                    <span>Liked Videos</span>
+                </a>
+
+                <hr class="my-4">
+
+                <h3 class="font-semibold px-4 mb-2">
+                    Explore
+                </h3>
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 hover:bg-gray-100 rounded-xl">
+                    🔥
+                    <span>Trending</span>
+                </a>
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 hover:bg-gray-100 rounded-xl">
+                    🎵
+                    <span>Music</span>
+                </a>
+
+                <a href="#"
+                   class="flex items-center gap-5 px-4 py-3 hover:bg-gray-100 rounded-xl">
+                    🎮
+                    <span>Gaming</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <main class="flex-1 p-4 sm:p-6">
+
+
+            <!-- Category Buttons -->
+
+            <div class="flex gap-3 overflow-x-auto pb-5">
+
+                <button class="bg-black text-white px-4 py-2 rounded-lg whitespace-nowrap">
+                    All
+                </button>
+
+                <button class="bg-gray-100 px-4 py-2 rounded-lg whitespace-nowrap hover:bg-gray-200">
+                    Music
+                </button>
+
+                <button class="bg-gray-100 px-4 py-2 rounded-lg whitespace-nowrap hover:bg-gray-200">
+                    Gaming
+                </button>
+
+                <button class="bg-gray-100 px-4 py-2 rounded-lg whitespace-nowrap hover:bg-gray-200">
+                    Programming
+                </button>
+
+                <button class="bg-gray-100 px-4 py-2 rounded-lg whitespace-nowrap hover:bg-gray-200">
+                    Live
+                </button>
+
+                <button class="bg-gray-100 px-4 py-2 rounded-lg whitespace-nowrap hover:bg-gray-200">
+                    News
+                </button>
+
+                <button class="bg-gray-100 px-4 py-2 rounded-lg whitespace-nowrap hover:bg-gray-200">
+                    Movies
+                </button>
+
+                <button class="bg-gray-100 px-4 py-2 rounded-lg whitespace-nowrap hover:bg-gray-200">
+                    Sports
+                </button>
+
+            </div>
+
+
+            <!-- ================= VIDEO GRID ================= -->
+
+            <section>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8">
+
+
+                    <!-- VIDEO 1 -->
+
+                    <article class="group cursor-pointer">
+
+                        <div class="relative aspect-video bg-gradient-to-br from-red-500 to-orange-500 rounded-xl overflow-hidden">
+
+                            <div class="absolute inset-0 flex items-center justify-center text-white text-5xl group-hover:scale-110 transition">
+                                ▶
+                            </div>
+
+                            <span class="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
+                                12:45
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3 mt-3">
+
+                            <div class="w-9 h-9 bg-blue-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+                                T
+                            </div>
+
+                            <div>
+
+                                <h2 class="font-semibold leading-5 line-clamp-2">
+                                    Learn Web Development From Scratch
+                                </h2>
+
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Tech Academy
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    1.2M views • 2 days ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 2 -->
+
+                    <article class="group cursor-pointer">
+
+                        <div class="relative aspect-video bg-gradient-to-br from-purple-600 to-pink-500 rounded-xl overflow-hidden">
+
+                            <div class="absolute inset-0 flex items-center justify-center text-white text-5xl group-hover:scale-110 transition">
+                                ▶
+                            </div>
+
+                            <span class="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
+                                08:32
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3 mt-3">
+
+                            <div class="w-9 h-9 bg-pink-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+                                M
+                            </div>
+
+                            <div>
+
+                                <h2 class="font-semibold leading-5 line-clamp-2">
+                                    Top 10 Songs You Need to Hear
+                                </h2>
+
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Music World
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    845K views • 1 week ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 3 -->
+
+                    <article class="group cursor-pointer">
+
+                        <div class="relative aspect-video bg-gradient-to-br from-blue-600 to-cyan-400 rounded-xl overflow-hidden">
+
+                            <div class="absolute inset-0 flex items-center justify-center text-white text-5xl group-hover:scale-110 transition">
+                                ▶
+                            </div>
+
+                            <span class="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
+                                15:20
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3 mt-3">
+
+                            <div class="w-9 h-9 bg-green-600 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+                                C
+                            </div>
+
+                            <div>
+
+                                <h2 class="font-semibold leading-5 line-clamp-2">
+                                    Python Projects for Beginners
+                                </h2>
+
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Code With Me
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    620K views • 3 days ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 4 -->
+
+                    <article class="group cursor-pointer">
+
+                        <div class="relative aspect-video bg-gradient-to-br from-green-500 to-teal-500 rounded-xl overflow-hidden">
+
+                            <div class="absolute inset-0 flex items-center justify-center text-white text-5xl group-hover:scale-110 transition">
+                                ▶
+                            </div>
+
+                            <span class="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
+                                22:10
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3 mt-3">
+
+                            <div class="w-9 h-9 bg-orange-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+                                T
+                            </div>
+
+                            <div>
+
+                                <h2 class="font-semibold leading-5 line-clamp-2">
+                                    Amazing Places You Must Visit
+                                </h2>
+
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Travel Tales
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    2.1M views • 5 days ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 5 -->
+
+                    <article class="group cursor-pointer">
+
+                        <div class="relative aspect-video bg-gradient-to-br from-yellow-500 to-red-500 rounded-xl overflow-hidden">
+
+                            <div class="absolute inset-0 flex items-center justify-center text-white text-5xl group-hover:scale-110 transition">
+                                ▶
+                            </div>
+
+                            <span class="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
+                                10:05
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3 mt-3">
+
+                            <div class="w-9 h-9 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+                                G
+                            </div>
+
+                            <div>
+
+                                <h2 class="font-semibold leading-5 line-clamp-2">
+                                    Ultimate Gaming Setup 2026
+                                </h2>
+
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Game Zone
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    970K views • 1 day ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 6 -->
+
+                    <article class="group cursor-pointer">
+
+                        <div class="relative aspect-video bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl overflow-hidden">
+
+                            <div class="absolute inset-0 flex items-center justify-center text-white text-5xl group-hover:scale-110 transition">
+                                ▶
+                            </div>
+
+                            <span class="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
+                                18:40
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3 mt-3">
+
+                            <div class="w-9 h-9 bg-indigo-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+                                A
+                            </div>
+
+                            <div>
+
+                                <h2 class="font-semibold leading-5 line-clamp-2">
+                                    Artificial Intelligence Explained
+                                </h2>
+
+                                <p class="text-sm text-gray-500 mt-1">
+                                    AI Simplified
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    530K views • 4 days ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 7 -->
+
+                    <article class="group cursor-pointer">
+
+                        <div class="relative aspect-video bg-gradient-to-br from-pink-500 to-red-600 rounded-xl overflow-hidden">
+
+                            <div class="absolute inset-0 flex items-center justify-center text-white text-5xl group-hover:scale-110 transition">
+                                ▶
+                            </div>
+
+                            <span class="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
+                                09:18
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3 mt-3">
+
+                            <div class="w-9 h-9 bg-pink-600 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+                                F
+                            </div>
+
+                            <div>
+
+                                <h2 class="font-semibold leading-5 line-clamp-2">
+                                    Easy Recipes You Can Try Today
+                                </h2>
+
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Food Corner
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    410K views • 6 days ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 8 -->
+
+                    <article class="group cursor-pointer">
+
+                        <div class="relative aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden">
+
+                            <div class="absolute inset-0 flex items-center justify-center text-white text-5xl group-hover:scale-110 transition">
+                                ▶
+                            </div>
+
+                            <span class="absolute bottom-2 right-2 bg-black text-white text-xs px-2 py-1 rounded">
+                                14:55
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3 mt-3">
+
+                            <div class="w-9 h-9 bg-red-600 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+                                S
+                            </div>
+
+                            <div>
+
+                                <h2 class="font-semibold leading-5 line-clamp-2">
+                                    The Future of Technology
+                                </h2>
+
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Science Today
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    780K views • 2 weeks ago
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="border-t border-gray-200 mt-10 py-8">
+
+        <div class="max-w-screen-2xl mx-auto px-6 text-center">
+
+            <div class="flex justify-center items-center gap-2 mb-2">
+
+                <div class="bg-red-600 text-white rounded px-2 py-1">
+                    ▶
+                </div>
+
+                <span class="font-bold text-lg">
+                    YouTube
+                </span>
+
+            </div>
+
+            <p class="text-sm text-gray-500">
+                Responsive Webpage Layout using Tailwind CSS
+            </p>
+
+            <p class="text-xs text-gray-400 mt-2">
+                FSD Lab Project • 2026
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
