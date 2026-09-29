@@ -64,7 +64,7 @@
             <div class="flex items-center justify-between h-20">
 
                 <!-- Logo & Brand Name -->
-                <a href="#" class="flex items-center gap-3 group">
+                <a href="#" id="brand-logo-link" class="flex items-center gap-3 group cursor-pointer">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 to-rose-500 flex items-center justify-center shadow-lg shadow-red-600/30 group-hover:scale-105 transition-all">
                         <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
@@ -80,14 +80,14 @@
 
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden md:flex items-center space-x-2">
-                    <a href="#features" class="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-900/60 rounded-lg transition-colors">Features</a>
-                    <a href="#how-it-works" class="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-900/60 rounded-lg transition-colors">How It Works</a>
-                    <a href="#about" class="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-900/60 rounded-lg transition-colors">About</a>
+                    <a href="#features" class="nav-landing-link px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-900/60 rounded-lg transition-colors">Features</a>
+                    <a href="#how-it-works" class="nav-landing-link px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-900/60 rounded-lg transition-colors">How It Works</a>
+                    <a href="#about" class="nav-landing-link px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-900/60 rounded-lg transition-colors">About</a>
                 </nav>
 
                 <!-- Desktop CTA Button -->
                 <div class="hidden md:flex items-center gap-4">
-                    <a href="#home" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-lg shadow-red-600/25 hover:scale-[1.02] transition-all">
+                    <a href="#home" id="btn-nav-get-started" class="btn-get-started-trigger inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-lg shadow-red-600/25 hover:scale-[1.02] transition-all cursor-pointer">
                         <span>GET STARTED</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -105,10 +105,10 @@
 
                 <!-- Mobile Dropdown Drawer -->
                 <div class="peer-checked:flex hidden flex-col absolute top-20 left-0 w-full bg-zinc-950/95 backdrop-blur-2xl border-b border-zinc-800 p-6 space-y-4 md:hidden shadow-2xl z-50">
-                    <a href="#features" class="text-zinc-300 hover:text-white text-base font-medium py-2 border-b border-zinc-900">Features</a>
-                    <a href="#how-it-works" class="text-zinc-300 hover:text-white text-base font-medium py-2 border-b border-zinc-900">How It Works</a>
-                    <a href="#about" class="text-zinc-300 hover:text-white text-base font-medium py-2 border-b border-zinc-900">About</a>
-                    <a href="#home" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-white bg-red-600 hover:bg-red-500 shadow-lg shadow-red-600/30">
+                    <a href="#features" class="nav-landing-link text-zinc-300 hover:text-white text-base font-medium py-2 border-b border-zinc-900">Features</a>
+                    <a href="#how-it-works" class="nav-landing-link text-zinc-300 hover:text-white text-base font-medium py-2 border-b border-zinc-900">How It Works</a>
+                    <a href="#about" class="nav-landing-link text-zinc-300 hover:text-white text-base font-medium py-2 border-b border-zinc-900">About</a>
+                    <a href="#home" id="btn-mobile-get-started" class="btn-get-started-trigger flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-white bg-red-600 hover:bg-red-500 shadow-lg shadow-red-600/30 cursor-pointer">
                         <span>GET STARTED</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -120,6 +120,12 @@
         </div>
     </header>
 
+
+    <!-- ================================================================= -->
+    <!-- LANDING PAGE VIEW (Hero, Features, How It Works, About)           -->
+    <!-- Smooth 500-800ms transition to Home/Upload Page on "Get Started"  -->
+    <!-- ================================================================= -->
+    <div id="landing-page-view" class="transition-all duration-500 ease-out">
 
     <!-- ================================================================= -->
     <!-- 2. HERO SECTION                                                   -->
@@ -152,7 +158,7 @@
 
                     <!-- CTAs -->
                     <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="#home" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-base text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-xl shadow-red-600/30 hover:scale-[1.02] transition-all">
+                        <a href="#home" id="btn-get-started" class="btn-get-started-trigger w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-base text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-xl shadow-red-600/30 hover:scale-[1.02] transition-all cursor-pointer">
                             <span>Get Started →</span>
                         </a>
                         <a href="#features" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 rounded-xl font-medium text-sm text-zinc-300 hover:text-white bg-zinc-900/60 hover:bg-zinc-800 border border-zinc-800 transition-all">
@@ -546,7 +552,7 @@
                         </div>
 
                         <div class="pt-2 text-center">
-                            <a href="#home" class="text-xs text-red-400 hover:text-red-300 font-semibold inline-flex items-center gap-1">
+                            <a href="#home" class="btn-get-started-trigger text-xs text-red-400 hover:text-red-300 font-semibold inline-flex items-center gap-1 cursor-pointer">
                                 Test Your Video Now <span>→</span>
                             </a>
                         </div>
@@ -556,18 +562,28 @@
             </div>
         </div>
     </section>
+    </div>
+    <!-- END LANDING PAGE VIEW -->
 
 
     <!-- ================================================================= -->
-    <!-- 6. HOME SECTION (Workspace & Analytics Preview)                   -->
+    <!-- HOME / UPLOAD PAGE VIEW (Workspace & Analytics Preview)           -->
+    <!-- Smoothly revealed after transition from Landing Page              -->
     <!-- ================================================================= -->
-    <section id="home" class="relative z-10 py-24 border-t border-zinc-800/80 bg-zinc-950/80">
+    <div id="home-page-view" class="hidden transition-all duration-500 ease-out">
+    <section id="home" class="relative z-10 py-16 sm:py-24 border-t border-zinc-800/80 bg-zinc-950/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- Section Title -->
+            <!-- Section Title with Back to Overview -->
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/50 text-red-400 text-xs font-semibold uppercase tracking-wider">
-                    CreatorIQ Workspace
+                <div class="inline-flex items-center gap-3">
+                    <button type="button" id="btn-back-to-landing" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700/60 hover:border-zinc-500 text-zinc-300 hover:text-white text-xs font-semibold tracking-wide transition-all cursor-pointer">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                        <span>Back to Overview</span>
+                    </button>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/50 text-red-400 text-xs font-semibold uppercase tracking-wider">
+                        CreatorIQ Workspace
+                    </div>
                 </div>
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
                     Welcome to CreatorIQ
@@ -591,138 +607,152 @@
                     </p>
                 </div>
 
-                <!-- Hidden native HTML file input; triggered by dropzone or button -->
-                <input type="file" id="video-file-input" class="hidden" accept="video/mp4,video/quicktime,video/webm,.mp4,.mov,.webm">
+                <!-- Video Upload & Analysis Form (HTML5 Drag & Drop API, File API & Video Events) -->
+                <form id="video-upload-form" class="space-y-6" onsubmit="return false;">
+                    <!-- Hidden native HTML file input; triggered by dropzone or button -->
+                    <input type="file" id="video-file-input" class="hidden" accept="video/mp4,video/quicktime,video/webm,.mp4,.mov,.webm">
 
-                <!-- Dashed Upload Dropzone Area (HTML5 Drag and Drop API) -->
-                <div id="upload-dropzone" class="group relative flex flex-col items-center justify-center border-2 border-dashed border-zinc-700 hover:border-red-500/80 rounded-2xl p-10 sm:p-14 bg-zinc-950/40 hover:bg-zinc-900/30 transition-all duration-300 cursor-pointer text-center">
-                    
-                    <!-- Ambient Glow inside Upload Area on Hover / Dragover -->
-                    <div id="dropzone-glow" class="absolute inset-0 bg-red-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-
-                    <!-- Upload Arrow Icon -->
-                    <div id="dropzone-icon" class="w-16 h-16 rounded-2xl bg-zinc-900 group-hover:bg-red-600/20 border border-zinc-700 group-hover:border-red-500/50 flex items-center justify-center mb-5 text-red-500 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-black/60">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
-                        </svg>
-                    </div>
-
-                    <!-- Upload Text -->
-                    <h4 id="dropzone-heading" class="text-lg font-bold text-white mb-1 group-hover:text-red-400 transition-colors">
-                        Upload Your Edited Video
-                    </h4>
-                    <p id="dropzone-subtext" class="text-sm text-zinc-400 mb-6 transition-colors">
-                        Drag & drop your video here or browse your files
-                    </p>
-
-                    <!-- Choose Video Button UI -->
-                    <button type="button" id="btn-browse-trigger" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-lg shadow-red-600/30 group-hover:shadow-red-600/50 group-hover:scale-105 transition-all">
-                        <span>[ Choose Video ]</span>
-                    </button>
-
-                    <span class="text-[11px] text-zinc-400 mt-4">
-                        MP4, MOV, or WebM up to 2GB • Fully confidential analysis
-                    </span>
-                </div>
-
-                <!-- Validation Error Alert Banner (Hidden by default) -->
-                <div id="upload-error-banner" class="hidden mt-4 p-4 rounded-xl bg-red-950/40 border border-red-800/60 text-red-300 text-xs flex items-center gap-3">
-                    <span class="text-base font-bold">⚠️</span>
-                    <span id="upload-error-text" class="flex-1">Please select a valid video file (MP4, MOV, or WebM) under 2GB.</span>
-                    <button type="button" id="btn-dismiss-error" class="text-zinc-400 hover:text-white text-sm font-bold px-2 py-1">✕</button>
-                </div>
-
-                <!-- Video Preview & Metadata Container (Revealed upon valid file selection) -->
-                <div id="video-preview-container" class="hidden space-y-6 pt-2">
-                    
-                    <!-- Preview Player Header -->
-                    <div class="flex items-center justify-between pb-3 border-b border-zinc-800">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-white">Video Preview</span>
-                        </div>
-                        <span class="text-xs text-zinc-400 font-mono" id="preview-status-pill">Ready for Upload</span>
-                    </div>
-
-                    <!-- Embedded HTML5 Video Player -->
-                    <div class="relative rounded-2xl overflow-hidden bg-black border border-zinc-800 shadow-2xl flex items-center justify-center">
-                        <video id="video-preview-player" controls playsinline class="w-full max-h-[380px] bg-black object-contain"></video>
-                    </div>
-
-                    <!-- Video File Metadata Grid (Filename, Size, Duration, Format) -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+                    <!-- Dashed Upload Dropzone Area (HTML5 Drag and Drop API) -->
+                    <div id="upload-dropzone" class="group relative flex flex-col items-center justify-center border-2 border-dashed border-zinc-700 hover:border-red-500/80 rounded-2xl p-10 sm:p-14 bg-zinc-950/40 hover:bg-zinc-900/30 transition-all duration-300 cursor-pointer text-center">
                         
-                        <!-- Metadata 1: Filename -->
-                        <div class="p-3.5 rounded-xl bg-zinc-950/60 border border-zinc-800">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1 flex items-center gap-1.5">
-                                <span>📁</span> FILENAME
-                            </div>
-                            <div id="file-info-name" class="font-mono text-xs font-semibold text-white truncate" title="sample.mp4">
-                                --
-                            </div>
+                        <!-- Ambient Glow inside Upload Area on Hover / Dragover -->
+                        <div id="dropzone-glow" class="absolute inset-0 bg-red-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+
+                        <!-- Upload Arrow Icon -->
+                        <div id="dropzone-icon" class="w-16 h-16 rounded-2xl bg-zinc-900 group-hover:bg-red-600/20 border border-zinc-700 group-hover:border-red-500/50 flex items-center justify-center mb-5 text-red-500 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-black/60">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                            </svg>
                         </div>
 
-                        <!-- Metadata 2: File Size -->
-                        <div class="p-3.5 rounded-xl bg-zinc-950/60 border border-zinc-800">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1 flex items-center gap-1.5">
-                                <span>💾</span> FILE SIZE
-                            </div>
-                            <div id="file-info-size" class="text-xs font-semibold text-white">
-                                --
-                            </div>
-                        </div>
+                        <!-- Upload Text -->
+                        <h4 id="dropzone-heading" class="text-lg font-bold text-white mb-1 group-hover:text-red-400 transition-colors">
+                            Upload Your Edited Video
+                        </h4>
+                        <p id="dropzone-subtext" class="text-sm text-zinc-400 mb-6 transition-colors">
+                            Drag & drop your video here or browse your files
+                        </p>
 
-                        <!-- Metadata 3: Duration -->
-                        <div class="p-3.5 rounded-xl bg-zinc-950/60 border border-zinc-800">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1 flex items-center gap-1.5">
-                                <span>⏱️</span> DURATION
-                            </div>
-                            <div id="file-info-duration" class="text-xs font-semibold text-white">
-                                Calculating...
-                            </div>
-                        </div>
-
-                        <!-- Metadata 4: File Type -->
-                        <div class="p-3.5 rounded-xl bg-zinc-950/60 border border-zinc-800">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1 flex items-center gap-1.5">
-                                <span>🎬</span> FORMAT
-                            </div>
-                            <div id="file-info-type" class="text-xs font-semibold text-emerald-400 uppercase">
-                                --
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Action Controls (Remove / Upload & Analyze) -->
-                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-                        <button type="button" id="btn-remove-video" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-xs text-zinc-300 hover:text-white bg-zinc-900/90 hover:bg-red-950/40 border border-zinc-800 hover:border-red-500/50 transition-all">
-                            <span>✕ Remove Video</span>
+                        <!-- Choose Video Button UI -->
+                        <button type="button" id="btn-browse-trigger" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-lg shadow-red-600/30 group-hover:shadow-red-600/50 group-hover:scale-105 transition-all">
+                            <span>Choose Video</span>
                         </button>
 
-                        <button type="button" id="btn-upload-analyze" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-red-600 via-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-xl shadow-red-600/30 hover:scale-[1.02] transition-all">
-                            <span>Upload & Prepare Analysis →</span>
-                        </button>
+                        <span class="text-[11px] text-zinc-400 mt-4">
+                            MP4, MOV, or WebM up to 500 MB • Fully confidential analysis
+                        </span>
                     </div>
 
-                    <!-- Upload / Analysis API Status Feedback Box -->
-                    <div id="upload-status-box" class="hidden p-4 rounded-xl bg-zinc-950/80 border border-zinc-800 space-y-2">
-                        <div class="flex items-center justify-between text-xs">
-                            <span id="upload-status-title" class="font-bold text-white flex items-center gap-2">
-                                <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-                                Uploading to backend (POST /api/upload)...
-                            </span>
-                            <span id="upload-status-percent" class="font-mono text-zinc-400">0%</span>
-                        </div>
-                        <div class="w-full bg-zinc-800 rounded-full h-1.5 overflow-hidden">
-                            <div id="upload-progress-bar" class="bg-gradient-to-r from-red-600 to-rose-500 h-1.5 rounded-full w-0 transition-all duration-300"></div>
-                        </div>
-                        <div id="upload-status-message" class="text-[11px] text-zinc-400">
-                            Connecting via Fetch API to <span class="font-mono text-zinc-300">/api/upload</span>...
-                        </div>
+                    <!-- Validation Error Alert Banner (Hidden by default) -->
+                    <div id="upload-error-banner" class="hidden mt-4 p-4 rounded-xl bg-red-950/40 border border-red-800/60 text-red-300 text-xs flex items-center gap-3">
+                        <span class="text-base font-bold">⚠️</span>
+                        <span id="upload-error-text" class="flex-1">Please select a valid video file (MP4, MOV, or WebM) under 500 MB.</span>
+                        <button type="button" id="btn-dismiss-error" class="text-zinc-400 hover:text-white text-sm font-bold px-2 py-1">✕</button>
                     </div>
 
-                </div>
+                    <!-- Video Preview & Metadata Container (Revealed upon valid file selection) -->
+                    <div id="video-preview-container" class="hidden space-y-6 pt-2">
+                        
+                        <!-- Preview Player Header -->
+                        <div class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                            <div class="flex items-center gap-2">
+                                <span id="preview-status-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-white">Video Preview</span>
+                            </div>
+                            <span class="text-xs text-zinc-400 font-mono" id="preview-status-pill">Ready for Analysis</span>
+                        </div>
+
+                        <!-- Embedded HTML5 Video Player -->
+                        <div class="relative rounded-2xl overflow-hidden bg-black border border-zinc-800 shadow-2xl flex items-center justify-center">
+                            <video id="video-preview-player" controls playsinline class="w-full max-h-[380px] bg-black object-contain"></video>
+                        </div>
+
+                        <!-- Video File Metadata Grid (Filename, Size, Duration, Format & Resolution) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+                            
+                            <!-- Metadata 1: Filename -->
+                            <div class="p-3.5 rounded-xl bg-zinc-950/60 border border-zinc-800">
+                                <div class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1 flex items-center gap-1.5">
+                                    <span>📁</span> FILENAME
+                                </div>
+                                <div id="file-info-name" class="font-mono text-xs font-semibold text-white truncate" title="sample.mp4">
+                                    --
+                                </div>
+                            </div>
+
+                            <!-- Metadata 2: File Size -->
+                            <div class="p-3.5 rounded-xl bg-zinc-950/60 border border-zinc-800">
+                                <div class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1 flex items-center gap-1.5">
+                                    <span>💾</span> FILE SIZE
+                                </div>
+                                <div id="file-info-size" class="text-xs font-semibold text-white">
+                                    --
+                                </div>
+                            </div>
+
+                            <!-- Metadata 3: Duration -->
+                            <div class="p-3.5 rounded-xl bg-zinc-950/60 border border-zinc-800">
+                                <div class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1 flex items-center gap-1.5">
+                                    <span>⏱️</span> DURATION
+                                </div>
+                                <div id="file-info-duration" class="text-xs font-semibold text-white">
+                                    --:--
+                                </div>
+                            </div>
+
+                            <!-- Metadata 4: File Type & Resolution -->
+                            <div class="p-3.5 rounded-xl bg-zinc-950/60 border border-zinc-800">
+                                <div class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1 flex items-center justify-between">
+                                    <span class="flex items-center gap-1.5"><span>🎬</span> FORMAT</span>
+                                    <span class="text-[9px] text-zinc-400 font-normal">RESOLUTION</span>
+                                </div>
+                                <div class="flex items-center justify-between mt-0.5">
+                                    <div id="file-info-type" class="text-xs font-semibold text-emerald-400 uppercase">
+                                        --
+                                    </div>
+                                    <div id="file-info-resolution" class="text-xs font-mono text-zinc-300">
+                                        -- × --
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Action Controls (Remove Video / Analyze My Video) -->
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+                            <button type="button" id="btn-remove-video" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-xs text-zinc-300 hover:text-white bg-zinc-900/90 hover:bg-red-950/40 border border-zinc-800 hover:border-red-500/50 transition-all">
+                                <span>✕ Remove Video</span>
+                            </button>
+
+                            <button type="button" id="btn-upload-analyze" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-red-600 via-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-xl shadow-red-600/30 hover:scale-[1.02] transition-all">
+                                <span id="btn-analyze-text">Analyze My Video →</span>
+                            </button>
+                        </div>
+
+                        <!-- Upload / Analysis API Status Feedback Box -->
+                        <div id="upload-status-box" class="hidden p-4 rounded-xl bg-zinc-950/80 border border-zinc-800 space-y-2">
+                            <div class="flex items-center justify-between text-xs">
+                                <span id="upload-status-title" class="font-bold text-white flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                                    Preparing video for analysis...
+                                </span>
+                                <span id="upload-status-percent" class="font-mono text-zinc-400">0%</span>
+                            </div>
+                            <div class="w-full bg-zinc-800 rounded-full h-1.5 overflow-hidden">
+                                <div id="upload-progress-bar" class="bg-gradient-to-r from-red-600 to-rose-500 h-1.5 rounded-full w-0 transition-all duration-300"></div>
+                            </div>
+                            <div id="upload-status-message" class="text-[11px] text-zinc-400">
+                                Connecting via Fetch API to <span class="font-mono text-zinc-300">/api/analyze</span>...
+                            </div>
+                            <div class="pt-2 flex justify-end">
+                                <button type="button" id="btn-upload-another" class="hidden inline-flex items-center gap-1.5 text-xs text-red-400 hover:text-red-300 font-semibold underline underline-offset-4 cursor-pointer">
+                                    <span>↺ Upload Another Video</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
             </div>
 
 
@@ -799,7 +829,7 @@
             <!-- Cards preserved with authentic "AI Analysis Pending" /   -->
             <!-- "Coming Soon" placeholders for future ML integration      -->
             <!-- ========================================================= -->
-            <div class="max-w-6xl mx-auto space-y-6">
+            <div id="analysis-dashboard" class="max-w-6xl mx-auto space-y-6">
 
                 <!-- Header Label & Subtext for Predictions -->
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pb-2 border-b border-zinc-800">
@@ -811,9 +841,14 @@
                             Diagnostic & Engagement Overview
                         </h3>
                     </div>
-                    <p class="text-xs text-zinc-400 max-w-md text-left sm:text-right">
-                        Predictions are prepared for future ML inference models and YouTube benchmark data.
-                    </p>
+                    <div class="flex items-center gap-3">
+                        <button type="button" id="btn-analyze-another" class="hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700 transition-all cursor-pointer">
+                            <span>↺ Analyze Another Video</span>
+                        </button>
+                        <p class="text-xs text-zinc-400 max-w-md text-left sm:text-right">
+                            Predictions are prepared for future ML inference models and YouTube benchmark data.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Primary Metrics Cards Grid (Row 1: Quality, Engagement, Views, Likes) -->
@@ -826,7 +861,7 @@
                             <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-950/60 text-amber-400 border border-amber-800/40">AI Analysis Pending</span>
                         </div>
                         <div class="text-2xl font-extrabold text-white mb-2 mt-2">
-                            Pending
+                            AI Analysis Pending
                         </div>
                         <div class="w-full bg-zinc-800 rounded-full h-1.5 overflow-hidden mb-2">
                             <div class="bg-zinc-700 h-1.5 rounded-full w-0"></div>
@@ -834,14 +869,14 @@
                         <div class="text-[11px] text-zinc-400">Will be available after ML integration</div>
                     </div>
 
-                    <!-- Metric 2: ENGAGEMENT SCORE -->
+                    <!-- Metric 2: ENGAGEMENT PREDICTION -->
                     <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 hover:border-red-500/50 transition-colors shadow-lg">
                         <div class="flex items-center justify-between mb-1">
-                            <div class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">ENGAGEMENT SCORE</div>
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">ENGAGEMENT PREDICTION</div>
                             <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-950/60 text-amber-400 border border-amber-800/40">AI Analysis Pending</span>
                         </div>
                         <div class="text-2xl font-extrabold text-white mb-2 mt-2">
-                            Pending
+                            AI Analysis Pending
                         </div>
                         <div class="w-full bg-zinc-800 rounded-full h-1.5 overflow-hidden mb-2">
                             <div class="bg-zinc-700 h-1.5 rounded-full w-0"></div>
@@ -853,9 +888,9 @@
                     <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 hover:border-red-500/50 transition-colors shadow-lg">
                         <div class="flex items-center justify-between mb-1">
                             <div class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">ESTIMATED VIEWS</div>
-                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-zinc-800 text-zinc-400 border border-zinc-700">Coming Soon</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-950/60 text-amber-400 border border-amber-800/40">AI Analysis Pending</span>
                         </div>
-                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">Coming Soon</div>
+                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">AI Analysis Pending</div>
                         <div class="text-[11px] text-zinc-400 mb-1">First 72-hour window projection</div>
                         <div class="text-[11px] text-zinc-400">Will be available after ML integration</div>
                     </div>
@@ -864,9 +899,9 @@
                     <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 hover:border-red-500/50 transition-colors shadow-lg">
                         <div class="flex items-center justify-between mb-1">
                             <div class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">ESTIMATED LIKES</div>
-                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-zinc-800 text-zinc-400 border border-zinc-700">Coming Soon</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-950/60 text-amber-400 border border-amber-800/40">AI Analysis Pending</span>
                         </div>
-                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">Coming Soon</div>
+                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">AI Analysis Pending</div>
                         <div class="text-[11px] text-zinc-400 mb-1">Category benchmark prediction</div>
                         <div class="text-[11px] text-zinc-400">Will be available after ML integration</div>
                     </div>
@@ -880,9 +915,9 @@
                     <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 hover:border-red-500/50 transition-colors shadow-lg">
                         <div class="flex items-center justify-between mb-1">
                             <div class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">ESTIMATED SHARES</div>
-                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-zinc-800 text-zinc-400 border border-zinc-700">Coming Soon</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-950/60 text-amber-400 border border-amber-800/40">AI Analysis Pending</span>
                         </div>
-                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">Coming Soon</div>
+                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">AI Analysis Pending</div>
                         <div class="text-[11px] text-zinc-400 mb-1">Virality index & hook rating</div>
                         <div class="text-[11px] text-zinc-400">Will be available after ML integration</div>
                     </div>
@@ -891,9 +926,9 @@
                     <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 hover:border-red-500/50 transition-colors shadow-lg">
                         <div class="flex items-center justify-between mb-1">
                             <div class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">AUDIENCE ANALYSIS</div>
-                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-zinc-800 text-zinc-400 border border-zinc-700">Coming Soon</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-950/60 text-amber-400 border border-amber-800/40">AI Analysis Pending</span>
                         </div>
-                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">Coming Soon</div>
+                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">AI Analysis Pending</div>
                         <div class="text-[11px] text-zinc-400 mb-1">Demographic & interest targeting</div>
                         <div class="text-[11px] text-zinc-400">Will be available after ML integration</div>
                     </div>
@@ -902,9 +937,9 @@
                     <div class="p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 hover:border-red-500/50 transition-colors shadow-lg">
                         <div class="flex items-center justify-between mb-1">
                             <div class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">VIEWER RETENTION</div>
-                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-zinc-800 text-zinc-400 border border-zinc-700">Coming Soon</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-950/60 text-amber-400 border border-amber-800/40">AI Analysis Pending</span>
                         </div>
-                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">Coming Soon</div>
+                        <div class="text-2xl font-extrabold text-white mb-2 mt-2">AI Analysis Pending</div>
                         <div class="text-[11px] text-zinc-400 mb-1">Drop-off pacing curve modeling</div>
                         <div class="text-[11px] text-zinc-400">Will be available after ML integration</div>
                     </div>
@@ -924,7 +959,7 @@
                                 <p class="text-xs text-zinc-400">Pre-publication review checklist & action items</p>
                             </div>
                         </div>
-                        <span class="text-xs font-medium text-amber-400 bg-amber-950/60 border border-amber-800/40 px-3 py-1 rounded-lg">AI Analysis Pending</span>
+                        <span class="text-xs font-semibold text-amber-400 bg-amber-950/60 border border-amber-800/40 px-3 py-1 rounded-lg">AI/ML Integration Coming Soon</span>
                     </div>
 
                     <!-- Recommendation Checklist Items (Future Integration Placeholders) -->
@@ -991,7 +1026,7 @@
 
                         <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-amber-950/60 border border-amber-600/40 shadow-lg text-amber-400 font-bold text-sm tracking-wide">
                             <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
-                            <span>● AI ANALYSIS PENDING</span>
+                            <span>● AI/ML INTEGRATION COMING SOON</span>
                         </div>
                     </div>
 
@@ -1001,6 +1036,8 @@
 
         </div>
     </section>
+    </div>
+    <!-- END HOME PAGE VIEW -->
 
 
     <!-- ================================================================= -->
@@ -1034,11 +1071,11 @@
                 <div class="md:col-span-3 space-y-3">
                     <div class="text-xs font-bold uppercase tracking-wider text-zinc-300">Quick Navigation</div>
                     <ul class="space-y-2 text-sm text-zinc-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
-                        <li><a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a></li>
-                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#home" class="hover:text-red-400 transition-colors">Upload & Analyze</a></li>
+                        <li><a href="#" class="footer-nav-landing hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#features" class="footer-nav-landing hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#how-it-works" class="footer-nav-landing hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#about" class="footer-nav-landing hover:text-white transition-colors">About</a></li>
+                        <li><a href="#home" class="footer-nav-workspace hover:text-red-400 transition-colors">Upload & Analyze</a></li>
                     </ul>
                 </div>
 
@@ -1071,7 +1108,7 @@
                 <div class="flex items-center gap-6">
                     <a href="#features" class="hover:text-zinc-400">Privacy Notice</a>
                     <a href="#about" class="hover:text-zinc-400">Terms of Service</a>
-                    <a href="#home" class="text-red-400 hover:text-red-300 font-medium">Launch Workspace ↑</a>
+                    <a href="#home" class="footer-nav-workspace text-red-400 hover:text-red-300 font-medium cursor-pointer">Launch Workspace ↑</a>
                 </div>
             </div>
 
@@ -1080,410 +1117,1224 @@
 
 
     <!-- ================================================================= -->
-    <!-- JAVASCRIPT: HTML5 DRAG & DROP, FILE API & FETCH API CLIENT        -->
+    <!-- CINEMATIC DARK/RED PAGE TRANSITION OVERLAY                        -->
+    <!-- Smooth 500-800ms transition entering CreatorIQ Application        -->
+    <!-- ================================================================= -->
+    <div id="page-transition-overlay" class="fixed inset-0 z-[100] pointer-events-none opacity-0 transition-opacity duration-500 ease-out flex items-center justify-center bg-black/90 backdrop-blur-xl">
+        <div class="flex flex-col items-center gap-4 text-center px-6">
+            <!-- Pulsing Red Brand Icon -->
+            <div class="relative flex items-center justify-center">
+                <div class="absolute w-24 h-24 rounded-full bg-red-600/30 blur-2xl animate-ping"></div>
+                <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-red-600 to-rose-500 flex items-center justify-center shadow-2xl shadow-red-600/60 border border-red-400/30 scale-100 transition-transform">
+                    <svg class="w-8 h-8 text-white fill-current animate-pulse" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-lg font-extrabold tracking-tight text-white flex items-center justify-center gap-1">
+                    Entering Creator<span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-400">IQ</span>
+                </div>
+                <div class="text-xs font-medium text-zinc-400 tracking-wider uppercase">Loading Workspace...</div>
+            </div>
+            <!-- Sleek Red Progress Line -->
+            <div class="w-48 bg-zinc-800 rounded-full h-1 overflow-hidden mt-1">
+                <div class="bg-gradient-to-r from-red-600 to-rose-500 h-1 rounded-full w-full animate-pulse"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- CUSTOM TAILWIND MODALS (No browser alert(), confirm(), prompt())  -->
+    <!-- Error Modal & Confirmation Modal with Red Glow & Smooth Scaling   -->
+    <!-- ================================================================= -->
+    <div id="custom-modal-backdrop" class="fixed inset-0 z-[90] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 ease-out">
+        
+        <!-- 1. CUSTOM ERROR MODAL (Size Limit / Unsupported Format) -->
+        <div id="custom-error-modal" class="hidden w-full max-w-md bg-zinc-950 border border-red-500/50 rounded-2xl p-6 sm:p-7 shadow-[0_0_50px_rgba(239,68,68,0.25)] transform scale-95 transition-all duration-300 ease-out text-center space-y-5">
+            <!-- Icon with Red Accent Glow -->
+            <div class="mx-auto w-14 h-14 rounded-2xl bg-red-950/60 border border-red-600/40 flex items-center justify-center text-red-500 text-2xl shadow-lg shadow-red-900/40">
+                <span id="error-modal-icon">⚠</span>
+            </div>
+            
+            <!-- Modal Title & Message -->
+            <div class="space-y-2">
+                <h3 id="error-modal-title" class="text-xl font-extrabold text-white tracking-tight">
+                    Video Too Large
+                </h3>
+                <div id="error-modal-message" class="text-sm text-zinc-300 leading-relaxed space-y-1">
+                    <p>Your selected video is 650 MB.</p>
+                    <p class="text-zinc-400">Please upload a video within the 500 MB limit.</p>
+                </div>
+            </div>
+
+            <!-- Action Button: OK -->
+            <div class="pt-2">
+                <button type="button" id="btn-modal-error-ok" class="w-full py-3 px-6 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-lg shadow-red-600/30 hover:scale-[1.02] transition-all cursor-pointer">
+                    OK
+                </button>
+            </div>
+        </div>
+
+        <!-- 2. CUSTOM CONFIRMATION MODAL (Valid Video Verification) -->
+        <div id="custom-confirm-modal" class="hidden w-full max-w-md bg-zinc-950 border border-zinc-800 hover:border-red-500/40 rounded-2xl p-6 sm:p-7 shadow-[0_0_50px_rgba(239,68,68,0.2)] transform scale-95 transition-all duration-300 ease-out text-center space-y-5">
+            <!-- Icon -->
+            <div class="mx-auto w-14 h-14 rounded-2xl bg-red-950/40 border border-red-600/30 flex items-center justify-center text-red-400 text-2xl shadow-lg shadow-red-900/30">
+                <span>🎬</span>
+            </div>
+
+            <!-- Title & Prompt -->
+            <div class="space-y-1.5">
+                <h3 class="text-xl font-extrabold text-white tracking-tight">
+                    Confirm Video
+                </h3>
+                <p class="text-sm text-zinc-400">
+                    Are you sure this is the video you want to analyze?
+                </p>
+            </div>
+
+            <!-- Video File Details Card -->
+            <div class="bg-zinc-900/70 border border-zinc-800 rounded-xl p-4 text-left space-y-2.5 text-xs">
+                <div class="flex items-center justify-between pb-2 border-b border-zinc-800">
+                    <span class="text-zinc-400 font-medium">Video:</span>
+                    <span id="confirm-modal-filename" class="font-mono font-semibold text-white truncate max-w-[200px]" title="video.mp4">video.mp4</span>
+                </div>
+                <div class="flex items-center justify-between pb-2 border-b border-zinc-800">
+                    <span class="text-zinc-400 font-medium">Size:</span>
+                    <span id="confirm-modal-filesize" class="font-semibold text-white">245 MB</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-zinc-400 font-medium">Format:</span>
+                    <span id="confirm-modal-format" class="font-semibold text-emerald-400 uppercase">MP4</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons: Cancel & Yes, Analyze -->
+            <div class="pt-2 grid grid-cols-2 gap-3">
+                <button type="button" id="btn-modal-confirm-cancel" class="w-full py-3 px-4 rounded-xl font-semibold text-sm text-zinc-300 hover:text-white bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 hover:border-zinc-600 transition-all cursor-pointer">
+                    Cancel
+                </button>
+                <button type="button" id="btn-modal-confirm-analyze" class="w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 shadow-lg shadow-red-600/30 hover:shadow-red-600/50 hover:scale-[1.02] transition-all cursor-pointer">
+                    Yes, Analyze
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- JAVASCRIPT: EVENT HANDLING & API-READY ARCHITECTURE                -->
+    <!-- Pure HTML5 + Vanilla JS (No React, Vue, Angular, or Bootstrap)    -->
     <!-- ================================================================= -->
     <script>
+        /**
+         * CreatorIQ — AI-Powered YouTube Video Analyzer
+         * Complete Vanilla JavaScript Event Handling Architecture:
+         * 1. click (Get Started, OK, Cancel, Yes Analyze, Remove Video, Nav)
+         * 2. change (Video file selection)
+         * 3. dragenter (Visual dropzone highlight)
+         * 4. dragover (Maintain drag state)
+         * 5. dragleave (Remove drag state)
+         * 6. drop (Receive and validate dropped video)
+         * 7. loadedmetadata (Read duration and resolution)
+         * 8. play (Video playback event)
+         * 9. pause (Video pause event)
+         * 10. ended (Video finished event)
+         * 11. timeupdate & volumechange (Player diagnostics)
+         * 
+         * No React, Vue, Angular, or Bootstrap. Pure HTML5 + Tailwind + Vanilla JS.
+         */
+
         // =====================================================================
-        // CreatorIQ Frontend API Client & Drag & Drop Handler
+        // 1. CONSTANTS & SYSTEM CONFIGURATION
         // =====================================================================
-        
-        // Supported video formats & constraints
         const SUPPORTED_EXTENSIONS = ['mp4', 'mov', 'webm'];
         const SUPPORTED_MIME_TYPES = ['video/mp4', 'video/quicktime', 'video/webm'];
-        const MAX_FILE_SIZE_BYTES = 2 * 1024 * 1024 * 1024; // 2 GB
+        const MAX_FILE_SIZE_BYTES = 500 * 1024 * 1024; // 500 MB Limit
 
-        // DOM Element Selectors
-        const fileInput = document.getElementById('video-file-input');
-        const dropzone = document.getElementById('upload-dropzone');
-        const dropzoneGlow = document.getElementById('dropzone-glow');
-        const dropzoneHeading = document.getElementById('dropzone-heading');
-        const dropzoneSubtext = document.getElementById('dropzone-subtext');
-        const browseTriggerBtn = document.getElementById('btn-browse-trigger');
-        
-        const previewContainer = document.getElementById('video-preview-container');
-        const previewPlayer = document.getElementById('video-preview-player');
-        const btnRemoveVideo = document.getElementById('btn-remove-video');
-        const btnUploadAnalyze = document.getElementById('btn-upload-analyze');
-        
-        const fileInfoName = document.getElementById('file-info-name');
-        const fileInfoSize = document.getElementById('file-info-size');
-        const fileInfoDuration = document.getElementById('file-info-duration');
-        const fileInfoType = document.getElementById('file-info-type');
-        
-        const errorBanner = document.getElementById('upload-error-banner');
-        const errorText = document.getElementById('upload-error-text');
-        const btnDismissError = document.getElementById('btn-dismiss-error');
-        
-        const uploadStatusBox = document.getElementById('upload-status-box');
-        const uploadStatusTitle = document.getElementById('upload-status-title');
-        const uploadStatusPercent = document.getElementById('upload-status-percent');
-        const uploadProgressBar = document.getElementById('upload-progress-bar');
-        const uploadStatusMessage = document.getElementById('upload-status-message');
+        // View Containers
+        let landingPageView;
+        let homePageView;
+        let pageTransitionOverlay;
 
-        const backendLiveIndicator = document.getElementById('backend-live-indicator');
-        const backendStatusDot = document.getElementById('backend-status-dot');
-        const backendStatusText = document.getElementById('backend-status-text');
+        // Custom Modals
+        let customModalBackdrop;
+        let customErrorModal;
+        let customConfirmModal;
+        let errorModalTitle;
+        let errorModalMessage;
+        let errorModalIcon;
+        let btnModalErrorOk;
+        let btnModalConfirmCancel;
+        let btnModalConfirmAnalyze;
+        let confirmModalFilename;
+        let confirmModalFilesize;
+        let confirmModalFormat;
 
+        // DOM Element References (Upload & Preview Interface)
+        let fileInput;
+        let dropzone;
+        let dropzoneGlow;
+        let dropzoneHeading;
+        let dropzoneSubtext;
+        let browseTriggerBtn;
+
+        let videoUploadForm;
+        let previewContainer;
+        let previewPlayer;
+        let previewStatusDot;
+        let previewStatusPill;
+
+        let btnRemoveVideo;
+        let btnUploadAnalyze;
+        let btnAnalyzeText;
+        let btnUploadAnother;
+        let btnAnalyzeAnother;
+        let btnBackToLanding;
+
+        let fileInfoName;
+        let fileInfoSize;
+        let fileInfoDuration;
+        let fileInfoType;
+        let fileInfoResolution;
+
+        let errorBanner;
+        let errorText;
+        let btnDismissError;
+
+        let uploadStatusBox;
+        let uploadStatusTitle;
+        let uploadStatusPercent;
+        let uploadProgressBar;
+        let uploadStatusMessage;
+
+        let backendLiveIndicator;
+        let backendStatusDot;
+        let backendStatusText;
+
+        // Application State
         let selectedVideoFile = null;
         let previewObjectUrl = null;
+        let dragCounter = 0;
+        let currentView = 'landing'; // 'landing' | 'home'
+        let isTransitioning = false;
 
         // =====================================================================
-        // HTML5 DRAG & DROP API IMPLEMENTATION
+        // 2. UTILITY FORMATTERS
         // =====================================================================
 
-        // Prevent browser default open behavior for drag-and-drop
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-            dropzone.addEventListener(eventName, preventDefaults, false);
-            document.body.addEventListener(eventName, preventDefaults, false);
-        });
-
-        function preventDefaults(e) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-
-        // Active drag visual feedback: Red border, red glow, smooth transition
-        ['dragenter', 'dragover'].forEach(eventName => {
-            dropzone.addEventListener(eventName, () => {
-                dropzone.classList.add('border-red-500', 'bg-red-950/20', 'shadow-[0_0_35px_rgba(220,38,38,0.4)]');
-                dropzone.classList.remove('border-zinc-700');
-                dropzoneGlow.classList.remove('opacity-0');
-                dropzoneGlow.classList.add('opacity-100');
-                dropzoneHeading.textContent = 'Drop your video here';
-                dropzoneHeading.classList.add('text-red-400');
-                dropzoneSubtext.textContent = 'Release to start pre-upload inspection';
-            }, false);
-        });
-
-        // Revert visual state when leaving or dropping
-        ['dragleave', 'drop'].forEach(eventName => {
-            dropzone.addEventListener(eventName, () => {
-                dropzone.classList.remove('border-red-500', 'bg-red-950/20', 'shadow-[0_0_35px_rgba(220,38,38,0.4)]');
-                dropzone.classList.add('border-zinc-700');
-                dropzoneGlow.classList.add('opacity-0');
-                dropzoneGlow.classList.remove('opacity-100');
-                dropzoneHeading.textContent = 'Upload Your Edited Video';
-                dropzoneHeading.classList.remove('text-red-400');
-                dropzoneSubtext.textContent = 'Drag & drop your video here or browse your files';
-            }, false);
-        });
-
-        // Handle Dropped File
-        dropzone.addEventListener('drop', (e) => {
-            const dt = e.dataTransfer;
-            const files = dt.files;
-            if (files && files.length > 0) {
-                handleFileSelection(files[0]);
-            }
-        }, false);
-
-        // Click to browse file
-        dropzone.addEventListener('click', (e) => {
-            if (e.target !== browseTriggerBtn) {
-                fileInput.click();
-            }
-        });
-
-        browseTriggerBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            fileInput.click();
-        });
-
-        fileInput.addEventListener('change', (e) => {
-            if (e.target.files && e.target.files.length > 0) {
-                handleFileSelection(e.target.files[0]);
-            }
-        });
-
-        // =====================================================================
-        // HTML5 FILE API & VALIDATION
-        // =====================================================================
-
+        /**
+         * Formats raw bytes into clean human-readable strings (e.g. 245 MB, 650 MB)
+         */
         function formatBytes(bytes, decimals = 1) {
-            if (!bytes || bytes === 0) return '0 Bytes';
+            if (!bytes || bytes === 0) return '0 MB';
             const k = 1024;
             const dm = decimals < 0 ? 0 : decimals;
             const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
             const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+            const formatted = parseFloat((bytes / Math.pow(k, i)).toFixed(dm));
+            return formatted + ' ' + sizes[i];
         }
 
+        /**
+         * Formats seconds into MM:SS or HH:MM:SS format
+         * Example: 272 seconds -> "04:32"
+         */
         function formatDuration(seconds) {
-            if (isNaN(seconds) || seconds === Infinity) return '--:--';
-            const hrs = Math.floor(seconds / 3600);
-            const mins = Math.floor((seconds % 3600) / 60);
-            const secs = Math.floor(seconds % 60);
+            if (isNaN(seconds) || seconds === Infinity || seconds < 0) return '--:--';
+            const totalSecs = Math.round(seconds);
+            const hrs = Math.floor(totalSecs / 3600);
+            const mins = Math.floor((totalSecs % 3600) / 60);
+            const secs = totalSecs % 60;
+
+            const padMins = mins.toString().padStart(2, '0');
+            const padSecs = secs.toString().padStart(2, '0');
+
             if (hrs > 0) {
-                return `${hrs}:${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+                const padHrs = hrs.toString().padStart(2, '0');
+                return `${padHrs}:${padMins}:${padSecs}`;
             }
-            return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+            return `${padMins}:${padSecs}`;
         }
 
-        function validateVideoFile(file) {
-            if (!file) return { valid: false, message: 'No file selected.' };
+        // =====================================================================
+        // 3. PAGE TRANSITIONS (Landing Page <-> Home/Upload Page)
+        // =====================================================================
 
-            const extension = file.name.split('.').pop().toLowerCase();
-            const mimeType = file.type.toLowerCase();
+        /**
+         * Smooth 500-800ms transition from Landing Page to Home/Upload Page:
+         * 1. Trigger button briefly scales and highlights with red glow
+         * 2. Landing page smoothly fades and slides away
+         * 3. Cinematic dark/red transition animation activates
+         * 4. Home/Upload page smoothly appears
+         */
+        function transitionToHomeView(triggerButton = null) {
+            if (isTransitioning) return;
+            isTransitioning = true;
 
-            const isExtensionValid = SUPPORTED_EXTENSIONS.includes(extension);
-            const isMimeValid = SUPPORTED_MIME_TYPES.some(type => mimeType.includes(type)) || mimeType.startsWith('video/');
-
-            if (!isExtensionValid && !isMimeValid) {
-                return {
-                    valid: false,
-                    message: `Unsupported video format (.${extension}). Supported containers: MP4, MOV, WebM.`
-                };
-            }
-
-            if (file.size > MAX_FILE_SIZE_BYTES) {
-                return {
-                    valid: false,
-                    message: `File size exceeds limit (${formatBytes(file.size)}). Maximum supported file size is 2GB.`
-                };
+            // Step 1: Button briefly scales and highlights (0ms - 150ms)
+            if (triggerButton) {
+                triggerButton.classList.add('scale-105', 'ring-2', 'ring-red-500', 'shadow-[0_0_35px_rgba(239,68,68,0.7)]');
             }
 
-            return { valid: true, extension };
+            setTimeout(() => {
+                // Step 2: Current landing page smoothly fades/slides away
+                if (landingPageView) {
+                    landingPageView.classList.add('opacity-0', '-translate-y-4', 'scale-[0.99]');
+                }
+
+                // Step 3: Cinematic dark/red transition overlay appears (300ms)
+                if (pageTransitionOverlay) {
+                    pageTransitionOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    pageTransitionOverlay.classList.add('opacity-100', 'pointer-events-auto');
+                }
+
+                setTimeout(() => {
+                    // Switch DOM view visibility
+                    if (landingPageView) {
+                        landingPageView.classList.add('hidden');
+                        landingPageView.classList.remove('opacity-0', '-translate-y-4', 'scale-[0.99]');
+                    }
+
+                    if (homePageView) {
+                        homePageView.classList.remove('hidden');
+                        homePageView.classList.add('opacity-0', 'translate-y-4');
+                    }
+
+                    // Reset scroll to top smoothly
+                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+                    setTimeout(() => {
+                        // Step 4: Home/Upload page smoothly appears
+                        if (homePageView) {
+                            homePageView.classList.remove('opacity-0', 'translate-y-4');
+                            homePageView.classList.add('opacity-100', 'translate-y-0');
+                        }
+
+                        // Fade out transition overlay
+                        if (pageTransitionOverlay) {
+                            pageTransitionOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                            pageTransitionOverlay.classList.add('opacity-0', 'pointer-events-none');
+                        }
+
+                        if (triggerButton) {
+                            triggerButton.classList.remove('scale-105', 'ring-2', 'ring-red-500', 'shadow-[0_0_35px_rgba(239,68,68,0.7)]');
+                        }
+
+                        currentView = 'home';
+                        isTransitioning = false;
+                        console.info('[CreatorIQ] Successfully transitioned to Home/Upload Page (Workspace Active).');
+                    }, 200);
+
+                }, 300);
+
+            }, 120);
         }
 
-        function showError(message) {
-            errorText.textContent = message;
-            errorBanner.classList.remove('hidden');
-        }
-
-        function clearError() {
-            errorBanner.classList.add('hidden');
-        }
-
-        btnDismissError.addEventListener('click', clearError);
-
-        function handleFileSelection(file) {
-            clearError();
-            const validation = validateVideoFile(file);
-            
-            if (!validation.valid) {
-                showError(validation.message);
+        /**
+         * Smooth transition from Home Page back to Landing Page
+         */
+        function transitionToLandingView(targetSectionSelector = null) {
+            if (isTransitioning) return;
+            if (currentView === 'landing') {
+                if (targetSectionSelector) {
+                    const el = document.querySelector(targetSectionSelector);
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }
                 return;
             }
 
-            selectedVideoFile = file;
+            isTransitioning = true;
 
-            // Display metadata immediately
-            fileInfoName.textContent = file.name;
-            fileInfoName.title = file.name;
-            fileInfoSize.textContent = formatBytes(file.size);
-            fileInfoType.textContent = (validation.extension || file.type || 'VIDEO').toUpperCase();
-            fileInfoDuration.textContent = 'Calculating duration...';
-
-            // Clean up prior object URL if existing
-            if (previewObjectUrl) {
-                URL.revokeObjectURL(previewObjectUrl);
+            if (homePageView) {
+                homePageView.classList.add('opacity-0', 'translate-y-4');
             }
 
-            // Create object URL for instant client-side video preview
-            previewObjectUrl = URL.createObjectURL(file);
-            previewPlayer.src = previewObjectUrl;
+            if (pageTransitionOverlay) {
+                pageTransitionOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                pageTransitionOverlay.classList.add('opacity-100', 'pointer-events-auto');
+            }
 
-            // Extract duration from HTML5 video element metadata event
-            previewPlayer.onloadedmetadata = () => {
-                fileInfoDuration.textContent = formatDuration(previewPlayer.duration);
-            };
+            setTimeout(() => {
+                if (homePageView) {
+                    homePageView.classList.add('hidden');
+                    homePageView.classList.remove('opacity-0', 'translate-y-4');
+                }
 
-            // Switch view from dropzone to video preview player
-            dropzone.classList.add('hidden');
-            previewContainer.classList.remove('hidden');
-            uploadStatusBox.classList.add('hidden');
+                if (landingPageView) {
+                    landingPageView.classList.remove('hidden');
+                    landingPageView.classList.add('opacity-0');
+                }
+
+                window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+                setTimeout(() => {
+                    if (landingPageView) {
+                        landingPageView.classList.remove('opacity-0');
+                        landingPageView.classList.add('opacity-100');
+                    }
+
+                    if (pageTransitionOverlay) {
+                        pageTransitionOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                        pageTransitionOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    }
+
+                    currentView = 'landing';
+                    isTransitioning = false;
+
+                    if (targetSectionSelector) {
+                        setTimeout(() => {
+                            const el = document.querySelector(targetSectionSelector);
+                            if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    }
+                }, 200);
+
+            }, 300);
         }
 
-        // Remove video and return to dropzone
-        btnRemoveVideo.addEventListener('click', () => {
-            resetUploadState();
-        });
+        // =====================================================================
+        // 4. CUSTOM MODALS (NO browser alert(), confirm(), prompt())
+        // =====================================================================
 
-        function resetUploadState() {
-            selectedVideoFile = null;
+        /**
+         * Shows custom Tailwind error modal with red glow accent and smooth scale animation
+         */
+        function showErrorModal(title, messageHtml, icon = '⚠') {
+            if (!customModalBackdrop || !customErrorModal) return;
+
+            // Populate content
+            if (errorModalTitle) errorModalTitle.textContent = title;
+            if (errorModalMessage) errorModalMessage.innerHTML = messageHtml;
+            if (errorModalIcon) errorModalIcon.textContent = icon;
+
+            // Ensure confirm modal is hidden
+            if (customConfirmModal) {
+                customConfirmModal.classList.add('hidden');
+            }
+
+            // Reveal error modal
+            customErrorModal.classList.remove('hidden');
+
+            // Trigger smooth fade in & scale in
+            customModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+            customModalBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+
+            setTimeout(() => {
+                customErrorModal.classList.remove('scale-95');
+                customErrorModal.classList.add('scale-100');
+            }, 20);
+        }
+
+        /**
+         * Shows custom Tailwind confirmation modal with video file details:
+         * Video: <filename>, Size: <size>, Format: <format>
+         */
+        function showConfirmationModal(file) {
+            if (!customModalBackdrop || !customConfirmModal || !file) return;
+
+            const fileName = file.name || 'video.mp4';
+            const extension = (fileName.includes('.') ? fileName.split('.').pop() : 'MP4').toUpperCase();
+            const formattedSize = formatBytes(file.size);
+
+            if (confirmModalFilename) {
+                confirmModalFilename.textContent = fileName;
+                confirmModalFilename.title = fileName;
+            }
+            if (confirmModalFilesize) {
+                confirmModalFilesize.textContent = formattedSize;
+            }
+            if (confirmModalFormat) {
+                confirmModalFormat.textContent = extension;
+            }
+
+            // Ensure error modal is hidden
+            if (customErrorModal) {
+                customErrorModal.classList.add('hidden');
+            }
+
+            // Reveal confirm modal
+            customConfirmModal.classList.remove('hidden');
+
+            // Trigger smooth fade in & scale in
+            customModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+            customModalBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+
+            setTimeout(() => {
+                customConfirmModal.classList.remove('scale-95');
+                customConfirmModal.classList.add('scale-100');
+            }, 20);
+        }
+
+        /**
+         * Smoothly closes all custom modals
+         */
+        function closeModal() {
+            if (!customModalBackdrop) return;
+
+            if (customErrorModal) {
+                customErrorModal.classList.remove('scale-100');
+                customErrorModal.classList.add('scale-95');
+            }
+            if (customConfirmModal) {
+                customConfirmModal.classList.remove('scale-100');
+                customConfirmModal.classList.add('scale-95');
+            }
+
+            customModalBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+            customModalBackdrop.classList.add('opacity-0', 'pointer-events-none');
+
+            setTimeout(() => {
+                if (customErrorModal) customErrorModal.classList.add('hidden');
+                if (customConfirmModal) customConfirmModal.classList.add('hidden');
+            }, 250);
+        }
+
+        // =====================================================================
+        // 5. FILE VALIDATION (Size <= 500MB & Formats MP4, MOV, WebM)
+        // =====================================================================
+
+        /**
+         * Validates selected video file:
+         * 1. Format: MP4, MOV, or WebM
+         * 2. Size: <= 500 MB
+         * Returns { valid: boolean, errorType?: 'size' | 'format', message?: string }
+         */
+        function validateVideoFile(file) {
+            if (!file) {
+                return {
+                    valid: false,
+                    errorType: 'format',
+                    title: '⚠ Unsupported File',
+                    message: 'Please upload an MP4, MOV or WebM video.'
+                };
+            }
+
+            const fileName = file.name || '';
+            const extension = fileName.includes('.') ? fileName.split('.').pop().toLowerCase() : '';
+            const mimeType = (file.type || '').toLowerCase();
+
+            const isExtensionValid = SUPPORTED_EXTENSIONS.includes(extension);
+            const isMimeValid = SUPPORTED_MIME_TYPES.some(type => mimeType === type || mimeType.includes(type));
+
+            // Format check
+            if (!isExtensionValid && !isMimeValid) {
+                return {
+                    valid: false,
+                    errorType: 'format',
+                    title: '⚠ Unsupported File',
+                    message: '<p>Please upload an MP4, MOV or WebM video.</p><p class="text-xs text-zinc-400 mt-1">Allowed formats: .mp4, .mov, .webm</p>'
+                };
+            }
+
+            // Size check: > 500 MB
+            if (file.size > MAX_FILE_SIZE_BYTES) {
+                const formattedActualSize = formatBytes(file.size);
+                return {
+                    valid: false,
+                    errorType: 'size',
+                    title: '⚠ Video Too Large',
+                    message: `<p class="font-semibold text-white">Your selected video is ${formattedActualSize}.</p><p class="text-zinc-400 mt-1">Please upload a video within the 500 MB limit.</p>`
+                };
+            }
+
+            return {
+                valid: true,
+                extension: extension || 'mp4'
+            };
+        }
+
+        // =====================================================================
+        // 6. VIDEO FILE SELECTION & PREVIEW PIPELINE
+        // =====================================================================
+
+        /**
+         * Main handler for newly selected or dropped file
+         */
+        function handleFileSelect(file) {
+            if (!file) return;
+
+            const validation = validateVideoFile(file);
+
+            // If invalid: show custom error modal and do not proceed
+            if (!validation.valid) {
+                // Clear any stored file
+                selectedVideoFile = null;
+                if (fileInput) fileInput.value = '';
+
+                showErrorModal(validation.title, validation.message, '⚠');
+                return;
+            }
+
+            // Valid video file: store reference
+            selectedVideoFile = file;
+
+            // Mount video preview and extract metadata
+            previewVideo(file, validation.extension);
+
+            // Show Confirmation Modal (Requirement 6: DO NOT immediately start analysis)
+            showConfirmationModal(file);
+        }
+
+        /**
+         * Mounts client-side video preview with URL.createObjectURL
+         */
+        function previewVideo(file, extension) {
+            if (fileInfoName) {
+                fileInfoName.textContent = file.name;
+                fileInfoName.title = file.name;
+            }
+            if (fileInfoSize) {
+                fileInfoSize.textContent = formatBytes(file.size);
+            }
+            if (fileInfoType) {
+                fileInfoType.textContent = (extension || file.name.split('.').pop() || 'MP4').toUpperCase();
+            }
+            if (fileInfoDuration) {
+                fileInfoDuration.textContent = 'Calculating...';
+            }
+            if (fileInfoResolution) {
+                fileInfoResolution.textContent = '-- × --';
+            }
+
+            // Revoke any previous object URL to prevent memory leaks
             if (previewObjectUrl) {
                 URL.revokeObjectURL(previewObjectUrl);
                 previewObjectUrl = null;
             }
-            previewPlayer.pause();
-            previewPlayer.removeAttribute('src');
-            previewPlayer.load();
 
-            fileInput.value = '';
-            fileInfoName.textContent = '--';
-            fileInfoSize.textContent = '--';
-            fileInfoDuration.textContent = '--:--';
-            fileInfoType.textContent = '--';
+            // Create fresh Object URL for HTML5 video playback
+            previewObjectUrl = URL.createObjectURL(file);
+            if (previewPlayer) {
+                previewPlayer.src = previewObjectUrl;
+                previewPlayer.load();
+            }
 
-            previewContainer.classList.add('hidden');
-            dropzone.classList.remove('hidden');
-            uploadStatusBox.classList.add('hidden');
-            clearError();
+            // Switch view from dropzone to video preview card
+            if (dropzone) dropzone.classList.add('hidden');
+            if (previewContainer) previewContainer.classList.remove('hidden');
+            if (uploadStatusBox) uploadStatusBox.classList.add('hidden');
+
+            if (previewStatusPill) {
+                previewStatusPill.textContent = 'Ready for Analysis';
+                previewStatusPill.className = 'text-xs text-zinc-400 font-mono';
+            }
         }
 
         // =====================================================================
-        // 1. VIDEO UPLOAD API (POST /api/upload)
+        // 7. VIDEO METADATA & PLAYBACK EVENTS
         // =====================================================================
-        async function uploadVideo(videoFile) {
-            const formData = new FormData();
-            formData.append("video", videoFile);
 
-            // Note: Do not perform AI/ML analysis during upload.
-            // The upload API should only handle the video upload.
-            try {
-                const response = await fetch("/api/upload", {
-                    method: "POST",
-                    body: formData
-                });
+        /**
+         * loadedmetadata event: Extracts duration (MM:SS) and resolution (W x H)
+         */
+        function loadVideoMetadata(e) {
+            if (!previewPlayer) return;
 
-                if (!response.ok) {
-                    throw new Error(`Upload failed with status: ${response.status}`);
-                }
+            const durationSec = previewPlayer.duration;
+            const width = previewPlayer.videoWidth;
+            const height = previewPlayer.videoHeight;
 
-                return await response.json();
-            } catch (error) {
-                console.warn("[CreatorIQ] Backend not reachable at /api/upload. Operating in standalone client preview mode.", error);
-                // Graceful client fallback structure matching backend API response
-                return {
-                    status: "uploaded",
-                    file_id: "preview-" + Math.random().toString(36).substring(2, 10),
-                    filename: videoFile.name,
-                    size_bytes: videoFile.size,
-                    message: "Client preview prepared. Backend connection ready for next phase."
+            // Formatted duration (e.g. 04:32)
+            if (fileInfoDuration) {
+                fileInfoDuration.textContent = formatDuration(durationSec);
+            }
+
+            // Formatted resolution (e.g. 1920 × 1080)
+            if (fileInfoResolution && width && height) {
+                fileInfoResolution.textContent = `${width} × ${height}`;
+            }
+
+            console.info(`[CreatorIQ] loadedmetadata event: Duration=${formatDuration(durationSec)} (${durationSec.toFixed(1)}s), Resolution=${width}x${height}`);
+        }
+
+        function handleVideoPlay(e) {
+            if (previewStatusPill) {
+                previewStatusPill.textContent = 'Playing';
+                previewStatusPill.className = 'text-xs text-emerald-400 font-mono font-semibold';
+            }
+            if (previewStatusDot) {
+                previewStatusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse';
+            }
+            console.info('[CreatorIQ] play event triggered.');
+        }
+
+        function handleVideoPause(e) {
+            if (previewStatusPill) {
+                previewStatusPill.textContent = 'Paused';
+                previewStatusPill.className = 'text-xs text-amber-400 font-mono font-semibold';
+            }
+            if (previewStatusDot) {
+                previewStatusDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+            }
+            console.info('[CreatorIQ] pause event triggered.');
+        }
+
+        function handleVideoEnded(e) {
+            if (previewStatusPill) {
+                previewStatusPill.textContent = 'Video finished';
+                previewStatusPill.className = 'text-xs text-zinc-400 font-mono font-semibold';
+            }
+            if (previewStatusDot) {
+                previewStatusDot.className = 'w-2.5 h-2.5 rounded-full bg-zinc-500';
+            }
+            console.info('[CreatorIQ] ended event triggered.');
+        }
+
+        function handleVideoTimeUpdate(e) {
+            // Player timeupdate event: tracked for future audience retention diagnostics
+            if (previewPlayer) {
+                window.lastPlaybackState = {
+                    currentTime: previewPlayer.currentTime,
+                    duration: previewPlayer.duration,
+                    timestamp: Date.now()
+                };
+            }
+        }
+
+        function handleVideoVolumeChange(e) {
+            if (previewPlayer) {
+                window.lastVolumeState = {
+                    volume: previewPlayer.volume,
+                    muted: previewPlayer.muted
                 };
             }
         }
 
         // =====================================================================
-        // 2. VIDEO ANALYSIS API (POST /api/analyze)
+        // 8. REMOVE VIDEO & RESET UPLOAD AREA
         // =====================================================================
-        async function triggerAnalysis(fileId, videoFile) {
+
+        /**
+         * Clears selected file, revokes Object URL, resets player and upload area
+         */
+        function removeVideo() {
+            resetUpload();
+        }
+
+        function resetUpload() {
+            selectedVideoFile = null;
+
+            // Revoke Object URL
+            if (previewObjectUrl) {
+                URL.revokeObjectURL(previewObjectUrl);
+                previewObjectUrl = null;
+            }
+
+            // Reset video element
+            if (previewPlayer) {
+                previewPlayer.pause();
+                previewPlayer.removeAttribute('src');
+                previewPlayer.load();
+            }
+
+            // Reset file input
+            if (fileInput) {
+                fileInput.value = '';
+            }
+
+            // Reset metadata displays
+            if (fileInfoName) fileInfoName.textContent = '--';
+            if (fileInfoSize) fileInfoSize.textContent = '--';
+            if (fileInfoDuration) fileInfoDuration.textContent = '--:--';
+            if (fileInfoType) fileInfoType.textContent = '--';
+            if (fileInfoResolution) fileInfoResolution.textContent = '-- × --';
+
+            // Reset status pill
+            if (previewStatusPill) {
+                previewStatusPill.textContent = 'Ready for Analysis';
+                previewStatusPill.className = 'text-xs text-zinc-400 font-mono';
+            }
+            if (previewStatusDot) {
+                previewStatusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse';
+            }
+
+            // Reset container visibility
+            if (previewContainer) previewContainer.classList.add('hidden');
+            if (dropzone) dropzone.classList.remove('hidden');
+            if (uploadStatusBox) uploadStatusBox.classList.add('hidden');
+
+            if (btnUploadAnother) btnUploadAnother.classList.add('hidden');
+            if (btnAnalyzeAnother) btnAnalyzeAnother.classList.add('hidden');
+
+            unhighlightDropzone();
+            console.info('[CreatorIQ] Upload area reset to initial state.');
+        }
+
+        // =====================================================================
+        // 9. DRAG AND DROP VISUAL EVENT HANDLERS
+        // =====================================================================
+
+        function highlightDropzone() {
+            if (!dropzone) return;
+            dropzone.classList.add('border-red-500', 'bg-red-950/20', 'shadow-[0_0_35px_rgba(220,38,38,0.4)]');
+            dropzone.classList.remove('border-zinc-700');
+            if (dropzoneGlow) {
+                dropzoneGlow.classList.remove('opacity-0');
+                dropzoneGlow.classList.add('opacity-100');
+            }
+            if (dropzoneHeading) {
+                dropzoneHeading.textContent = 'Drop your video here';
+                dropzoneHeading.classList.add('text-red-400');
+            }
+            if (dropzoneSubtext) {
+                dropzoneSubtext.textContent = 'Release to start pre-upload inspection';
+            }
+        }
+
+        function unhighlightDropzone() {
+            if (!dropzone) return;
+            dropzone.classList.remove('border-red-500', 'bg-red-950/20', 'shadow-[0_0_35px_rgba(220,38,38,0.4)]');
+            dropzone.classList.add('border-zinc-700');
+            if (dropzoneGlow) {
+                dropzoneGlow.classList.add('opacity-0');
+                dropzoneGlow.classList.remove('opacity-100');
+            }
+            if (dropzoneHeading) {
+                dropzoneHeading.textContent = 'Upload Your Edited Video';
+                dropzoneHeading.classList.remove('text-red-400');
+            }
+            if (dropzoneSubtext) {
+                dropzoneSubtext.textContent = 'Drag & drop your video here or browse your files';
+            }
+        }
+
+        function handleDragEnter(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            dragCounter++;
+            highlightDropzone();
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            highlightDropzone();
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            dragCounter--;
+            if (dragCounter <= 0) {
+                dragCounter = 0;
+                unhighlightDropzone();
+            }
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            dragCounter = 0;
+            unhighlightDropzone();
+
+            const dt = e.dataTransfer;
+            if (dt && dt.files && dt.files.length > 0) {
+                handleFileSelect(dt.files[0]);
+            }
+        }
+
+        // =====================================================================
+        // 10. ANALYZE VIDEO EVENT & FUTURE API CONNECTION
+        // =====================================================================
+
+        /**
+         * Prepares the frontend for future AI/ML API integration:
+         * 1. Displays loading state: "Preparing your video for analysis..."
+         * 2. Prepares FormData for POST /api/analyze
+         * 3. Reveals existing analysis dashboard with "AI Analysis Pending"
+         * 4. Does NOT generate fake ML predictions or scores
+         */
+        async function analyzeVideo() {
+            if (!selectedVideoFile) {
+                showErrorModal('⚠ No Video Selected', 'Please upload an MP4, MOV or WebM video first.', '⚠');
+                return;
+            }
+
+            // Close confirmation modal if open
+            closeModal();
+
+            // Disable analyze button and display loading state
+            if (btnUploadAnalyze) {
+                btnUploadAnalyze.disabled = true;
+                btnUploadAnalyze.classList.add('opacity-60', 'cursor-not-allowed');
+            }
+
+            if (uploadStatusBox) {
+                uploadStatusBox.classList.remove('hidden');
+                uploadStatusTitle.textContent = "Preparing your video for analysis...";
+                uploadStatusPercent.textContent = "35%";
+                uploadProgressBar.style.width = "35%";
+                uploadStatusMessage.textContent = "Packaging video payload for POST /api/analyze...";
+            }
+
+            // Prepare FormData payload for future API integration (Requirement 12)
             const formData = new FormData();
-            if (fileId) formData.append("file_id", fileId);
-            if (videoFile) formData.append("video", videoFile);
+            formData.append("video", selectedVideoFile);
 
             // =================================================================
-            // AI/ML video analysis will be connected here in the next development phase.
+            // Future: connect this event to POST /api/analyze
+            // Future API integration
+            // fetch('/api/analyze', {
+            //     method: 'POST',
+            //     body: formData
+            // });
             // =================================================================
+
             try {
+                if (uploadStatusPercent) uploadStatusPercent.textContent = "65%";
+                if (uploadProgressBar) uploadProgressBar.style.width = "65%";
+                if (uploadStatusMessage) {
+                    uploadStatusMessage.textContent = "Connecting to POST /api/analyze via Fetch API...";
+                }
+
+                // Attempt live backend call if Flask server is running
                 const response = await fetch("/api/analyze", {
                     method: "POST",
                     body: formData
                 });
 
-                if (!response.ok) {
-                    throw new Error(`Analysis initialization failed with status: ${response.status}`);
-                }
-
-                return await response.json();
-            } catch (error) {
-                console.warn("[CreatorIQ] Analysis API structure ready. Awaiting ML integration:", error);
-                return {
-                    status: "pending",
-                    analysis_id: "simulated-analysis-" + (fileId || "default"),
-                    message: "AI Analysis Pending - Will be available after ML integration"
-                };
-            }
-        }
-
-        // =====================================================================
-        // 3. ANALYSIS RESULTS API (GET /api/analysis/{id})
-        // =====================================================================
-        async function fetchAnalysisResults(analysisId) {
-            // This endpoint will later return:
-            // - Video quality
-            // - Engagement score
-            // - Predicted views
-            // - Predicted likes
-            // - Predicted shares
-            // - Audience analysis
-            // - Retention analysis
-            // - AI recommendations
-            // For the current phase, do not generate these results.
-            // Existing dashboard displays "AI Analysis Pending" / "Coming Soon".
-            try {
-                const response = await fetch(`/api/analysis/${analysisId}`);
                 if (response.ok) {
-                    return await response.json();
+                    const apiData = await response.json();
+                    console.info("[CreatorIQ] Backend response from /api/analyze:", apiData);
                 }
-            } catch (error) {
-                console.warn("[CreatorIQ] Results API structure ready. Awaiting ML model inference:", error);
+            } catch (networkError) {
+                // Standalone mode: API endpoint offline, smoothly prepare preview interface
+                console.info("[CreatorIQ] Backend endpoint /api/analyze not currently active. Ready in standalone mode.");
             }
-            return null;
+
+            // Smooth perceived transition
+            await new Promise(resolve => setTimeout(resolve, 600));
+
+            if (uploadProgressBar) uploadProgressBar.style.width = "100%";
+            if (uploadStatusPercent) uploadStatusPercent.textContent = "100%";
+            if (uploadStatusTitle) {
+                uploadStatusTitle.innerHTML = '✓ Video Ready: <span class="text-amber-400">AI Analysis Pending</span>';
+            }
+            if (uploadStatusMessage) {
+                uploadStatusMessage.innerHTML = 'Video payload prepared. <strong class="text-zinc-200">AI/ML integration coming soon in the next phase.</strong>';
+            }
+
+            // Reveal analyze another video buttons
+            if (btnUploadAnother) btnUploadAnother.classList.remove('hidden');
+            if (btnAnalyzeAnother) btnAnalyzeAnother.classList.remove('hidden');
+
+            if (btnUploadAnalyze) {
+                btnUploadAnalyze.disabled = false;
+                btnUploadAnalyze.classList.remove('opacity-60', 'cursor-not-allowed');
+            }
+
+            // Smoothly scroll to the analysis dashboard
+            const dashboard = document.getElementById('analysis-dashboard');
+            if (dashboard) {
+                dashboard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
 
         // =====================================================================
-        // SUBMIT ACTION: Upload & Trigger Prepared APIs
+        // 11. BACKEND HEALTH CHECK
         // =====================================================================
-        btnUploadAnalyze.addEventListener('click', async () => {
-            if (!selectedVideoFile) return;
 
-            // UI feedback
-            uploadStatusBox.classList.remove('hidden');
-            uploadStatusTitle.textContent = 'Uploading to backend (POST /api/upload)...';
-            uploadStatusPercent.textContent = '30%';
-            uploadProgressBar.style.width = '30%';
-            uploadStatusMessage.textContent = 'Building FormData payload with HTML5 File API...';
-            btnUploadAnalyze.disabled = true;
-            btnUploadAnalyze.classList.add('opacity-50', 'cursor-not-allowed');
-
-            try {
-                // 1. Invoke Upload API
-                const uploadResult = await uploadVideo(selectedVideoFile);
-                
-                uploadStatusPercent.textContent = '70%';
-                uploadProgressBar.style.width = '70%';
-                uploadStatusTitle.textContent = 'Upload registered. Preparing Analysis API...';
-                uploadStatusMessage.textContent = `File ID: ${uploadResult.file_id}. Invoking POST /api/analyze...`;
-
-                // 2. Invoke Analysis API structure
-                const analysisResult = await triggerAnalysis(uploadResult.file_id, selectedVideoFile);
-
-                uploadStatusPercent.textContent = '100%';
-                uploadProgressBar.style.width = '100%';
-                uploadStatusTitle.innerHTML = '✓ Video Queued: <span class="text-amber-400">AI Analysis Pending</span>';
-                uploadStatusMessage.innerHTML = 'Upload completed. Video analysis API structure prepared. <strong class="text-zinc-200">AI/ML video analysis will be connected here in the next development phase.</strong>';
-
-                // Scroll smoothly to dashboard metrics
-                const dashboardHeader = document.querySelector('#home h3');
-                if (dashboardHeader) {
-                    dashboardHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-
-            } catch (err) {
-                showError('Error during upload communication: ' + err.message);
-            } finally {
-                btnUploadAnalyze.disabled = false;
-                btnUploadAnalyze.classList.remove('opacity-50', 'cursor-not-allowed');
-            }
-        });
-
-        // =====================================================================
-        // BACKEND HEALTH CHECK (GET /api/health)
-        // =====================================================================
         async function checkBackendHealth() {
+            if (!backendStatusDot || !backendStatusText) return;
             try {
                 const response = await fetch('/api/health');
                 if (response.ok) {
                     const health = await response.json();
                     backendStatusDot.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
                     backendStatusText.textContent = 'Flask Backend Connected (Port 5000)';
-                    backendLiveIndicator.classList.remove('bg-zinc-800/80');
-                    backendLiveIndicator.classList.add('bg-emerald-950/60', 'border-emerald-700/50', 'text-emerald-300');
+                    if (backendLiveIndicator) {
+                        backendLiveIndicator.classList.remove('bg-zinc-800/80');
+                        backendLiveIndicator.classList.add('bg-emerald-950/60', 'border-emerald-700/50', 'text-emerald-300');
+                    }
                     console.info('[CreatorIQ] Connected to Flask Backend API:', health);
                 }
             } catch (e) {
-                // Standalone static mode
                 backendStatusDot.className = 'w-2 h-2 rounded-full bg-zinc-400';
                 backendStatusText.textContent = 'Client API-Ready (Fetch API)';
             }
         }
 
-        // Initialize health ping
-        window.addEventListener('DOMContentLoaded', () => {
+        // =====================================================================
+        // 12. EVENT LISTENER REGISTRATION & INITIALIZATION
+        // =====================================================================
+
+        function initEventListeners() {
+            // View containers
+            landingPageView = document.getElementById('landing-page-view');
+            homePageView = document.getElementById('home-page-view');
+            pageTransitionOverlay = document.getElementById('page-transition-overlay');
+
+            // Custom Modals
+            customModalBackdrop = document.getElementById('custom-modal-backdrop');
+            customErrorModal = document.getElementById('custom-error-modal');
+            customConfirmModal = document.getElementById('custom-confirm-modal');
+            errorModalTitle = document.getElementById('error-modal-title');
+            errorModalMessage = document.getElementById('error-modal-message');
+            errorModalIcon = document.getElementById('error-modal-icon');
+            btnModalErrorOk = document.getElementById('btn-modal-error-ok');
+            btnModalConfirmCancel = document.getElementById('btn-modal-confirm-cancel');
+            btnModalConfirmAnalyze = document.getElementById('btn-modal-confirm-analyze');
+            confirmModalFilename = document.getElementById('confirm-modal-filename');
+            confirmModalFilesize = document.getElementById('confirm-modal-filesize');
+            confirmModalFormat = document.getElementById('confirm-modal-format');
+
+            // Upload & Preview DOM
+            fileInput = document.getElementById('video-file-input');
+            dropzone = document.getElementById('upload-dropzone');
+            dropzoneGlow = document.getElementById('dropzone-glow');
+            dropzoneHeading = document.getElementById('dropzone-heading');
+            dropzoneSubtext = document.getElementById('dropzone-subtext');
+            browseTriggerBtn = document.getElementById('btn-browse-trigger');
+
+            videoUploadForm = document.getElementById('video-upload-form');
+            previewContainer = document.getElementById('video-preview-container');
+            previewPlayer = document.getElementById('video-preview-player');
+            previewStatusDot = document.getElementById('preview-status-dot');
+            previewStatusPill = document.getElementById('preview-status-pill');
+
+            btnRemoveVideo = document.getElementById('btn-remove-video');
+            btnUploadAnalyze = document.getElementById('btn-upload-analyze');
+            btnAnalyzeText = document.getElementById('btn-analyze-text');
+            btnUploadAnother = document.getElementById('btn-upload-another');
+            btnAnalyzeAnother = document.getElementById('btn-analyze-another');
+            btnBackToLanding = document.getElementById('btn-back-to-landing');
+
+            fileInfoName = document.getElementById('file-info-name');
+            fileInfoSize = document.getElementById('file-info-size');
+            fileInfoDuration = document.getElementById('file-info-duration');
+            fileInfoType = document.getElementById('file-info-type');
+            fileInfoResolution = document.getElementById('file-info-resolution');
+
+            errorBanner = document.getElementById('upload-error-banner');
+            errorText = document.getElementById('upload-error-text');
+            btnDismissError = document.getElementById('btn-dismiss-error');
+
+            uploadStatusBox = document.getElementById('upload-status-box');
+            uploadStatusTitle = document.getElementById('upload-status-title');
+            uploadStatusPercent = document.getElementById('upload-status-percent');
+            uploadProgressBar = document.getElementById('upload-progress-bar');
+            uploadStatusMessage = document.getElementById('upload-status-message');
+
+            backendLiveIndicator = document.getElementById('backend-live-indicator');
+            backendStatusDot = document.getElementById('backend-status-dot');
+            backendStatusText = document.getElementById('backend-status-text');
+
+            // -----------------------------------------------------------------
+            // EVENT 1: GET STARTED CLICK EVENTS (Smooth Page Transition)
+            // -----------------------------------------------------------------
+            const getStartedTriggers = document.querySelectorAll('.btn-get-started-trigger, #btn-get-started, #btn-nav-get-started, #btn-mobile-get-started');
+            getStartedTriggers.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    transitionToHomeView(btn);
+                });
+            });
+
+            // Brand Logo Link (Click returns to Landing Page)
+            const brandLogo = document.getElementById('brand-logo-link');
+            if (brandLogo) {
+                brandLogo.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    transitionToLandingView();
+                });
+            }
+
+            // Back to Overview Button in Workspace
+            if (btnBackToLanding) {
+                btnBackToLanding.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    transitionToLandingView();
+                });
+            }
+
+            // Landing navigation links in header
+            const navLandingLinks = document.querySelectorAll('.nav-landing-link');
+            navLandingLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const targetHash = link.getAttribute('href');
+                    if (currentView === 'home') {
+                        e.preventDefault();
+                        transitionToLandingView(targetHash);
+                    }
+                    // Close mobile drawer if open
+                    const navToggle = document.getElementById('nav-toggle');
+                    if (navToggle) navToggle.checked = false;
+                });
+            });
+
+            // Footer navigation links
+            const footerLandingLinks = document.querySelectorAll('.footer-nav-landing');
+            footerLandingLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const targetHash = link.getAttribute('href');
+                    if (currentView === 'home') {
+                        e.preventDefault();
+                        transitionToLandingView(targetHash !== '#' ? targetHash : null);
+                    }
+                });
+            });
+
+            const footerWorkspaceLinks = document.querySelectorAll('.footer-nav-workspace');
+            footerWorkspaceLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (currentView === 'landing') {
+                        transitionToHomeView();
+                    } else {
+                        const homeSection = document.getElementById('home');
+                        if (homeSection) homeSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // -----------------------------------------------------------------
+            // EVENT 2: MODAL CLICK EVENTS (OK, Cancel, Yes Analyze)
+            // -----------------------------------------------------------------
+            // Error Modal OK Button
+            if (btnModalErrorOk) {
+                btnModalErrorOk.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    closeModal();
+                    resetUpload();
+                });
+            }
+
+            // Confirmation Modal Cancel Button (Keep selected video & preview)
+            if (btnModalConfirmCancel) {
+                btnModalConfirmCancel.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    closeModal();
+                    console.info('[CreatorIQ] User cancelled video confirmation. Video preview retained.');
+                });
+            }
+
+            // Confirmation Modal "Yes, Analyze" Button
+            if (btnModalConfirmAnalyze) {
+                btnModalConfirmAnalyze.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    analyzeVideo();
+                });
+            }
+
+            // Close modal when clicking on backdrop outside modal content
+            if (customModalBackdrop) {
+                customModalBackdrop.addEventListener('click', (e) => {
+                    if (e.target === customModalBackdrop) {
+                        closeModal();
+                    }
+                });
+            }
+
+            // -----------------------------------------------------------------
+            // EVENT 3: FILE SELECTION (Click & Change)
+            // -----------------------------------------------------------------
+            if (browseTriggerBtn) {
+                browseTriggerBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    fileInput.click();
+                });
+            }
+
+            if (dropzone) {
+                dropzone.addEventListener('click', (e) => {
+                    if (e.target !== browseTriggerBtn && !browseTriggerBtn?.contains(e.target)) {
+                        fileInput.click();
+                    }
+                });
+            }
+
+            if (fileInput) {
+                fileInput.addEventListener('change', (e) => {
+                    if (e.target.files && e.target.files.length > 0) {
+                        handleFileSelect(e.target.files[0]);
+                    }
+                });
+            }
+
+            // -----------------------------------------------------------------
+            // EVENT 4: DRAG AND DROP (dragenter, dragover, dragleave, drop)
+            // -----------------------------------------------------------------
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                window.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }, false);
+            });
+
+            if (dropzone) {
+                dropzone.addEventListener('dragenter', handleDragEnter, false);
+                dropzone.addEventListener('dragover', handleDragOver, false);
+                dropzone.addEventListener('dragleave', handleDragLeave, false);
+                dropzone.addEventListener('drop', handleDrop, false);
+            }
+
+            // -----------------------------------------------------------------
+            // EVENT 5: VIDEO METADATA & PLAYBACK EVENTS
+            // -----------------------------------------------------------------
+            if (previewPlayer) {
+                previewPlayer.addEventListener('loadedmetadata', loadVideoMetadata);
+                previewPlayer.addEventListener('play', handleVideoPlay);
+                previewPlayer.addEventListener('pause', handleVideoPause);
+                previewPlayer.addEventListener('ended', handleVideoEnded);
+                previewPlayer.addEventListener('timeupdate', handleVideoTimeUpdate);
+                previewPlayer.addEventListener('volumechange', handleVideoVolumeChange);
+            }
+
+            // -----------------------------------------------------------------
+            // EVENT 6: REMOVE VIDEO
+            // -----------------------------------------------------------------
+            if (btnRemoveVideo) {
+                btnRemoveVideo.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    removeVideo();
+                });
+            }
+
+            // -----------------------------------------------------------------
+            // EVENT 7: ANALYZE MY VIDEO (Preview Card Button)
+            // -----------------------------------------------------------------
+            if (btnUploadAnalyze) {
+                btnUploadAnalyze.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    analyzeVideo();
+                });
+            }
+
+            // -----------------------------------------------------------------
+            // EVENT 8: RESET & UPLOAD ANOTHER VIDEO
+            // -----------------------------------------------------------------
+            if (btnUploadAnother) {
+                btnUploadAnother.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    resetUpload();
+                    const homeSection = document.getElementById('home');
+                    if (homeSection) homeSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            if (btnAnalyzeAnother) {
+                btnAnalyzeAnother.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    resetUpload();
+                    const homeSection = document.getElementById('home');
+                    if (homeSection) homeSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            // Initialize backend health check
             checkBackendHealth();
-        });
+            console.info('[CreatorIQ] All event listeners registered successfully.');
+        }
+
+        // Initialize on DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initEventListeners);
+        } else {
+            initEventListeners();
+        }
     </script>
 </body>
 </html>
-
