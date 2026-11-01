@@ -36,8 +36,12 @@ uploads/
 *.webm
 *.mkv
 
+# Dependencies
+node_modules/
+
 # IDE & OS files
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+

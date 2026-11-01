@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Python Tutorial for Beginners",
+      "fileName": "python_tutorial.mp4",
+      "category": "Education",
+      "videoType": "Long-form",
+      "targetAudience": "Students",
+      "description": "Comprehensive hands-on Python programming tutorial covering syntax, functions, and OOP.",
+      "uploadDate": "2026-11-01",
+      "status": "Draft"
+    },
+    {
+      "id": "2",
+      "title": "Modern Full-Stack Development Crash Course",
+      "fileName": "fullstack_react_node.mp4",
+      "category": "Technology",
+      "videoType": "Long-form",
+      "targetAudience": "Professionals",
+      "description": "Step-by-step masterclass on React component architectures, REST API endpoints, and database models.",
+      "uploadDate": "2026-10-29",
+      "status": "Ready for Analysis"
+    },
+    {
+      "id": "3",
+      "title": "Top 5 YouTube Growth Secrets in 2026",
+      "fileName": "growth_hacks_shorts.mp4",
+      "category": "Entertainment",
+      "videoType": "YouTube Shorts",
+      "targetAudience": "Creators",
+      "description": "Quick 60-second viral breakdown on high-retention thumbnail hooks and audio pacing.",
+      "uploadDate": "2026-10-31",
+      "status": "Ready to Publish"
+    },
+    {
+      "id": "4",
+      "title": "Unreal Engine 5.4 Raytracing Gameplay Test",
+      "fileName": "ue5_gameplay_benchmark.mp4",
+      "category": "Gaming",
+      "videoType": "Long-form",
+      "targetAudience": "General audience",
+      "description": "Ultra 4K 60FPS graphical benchmark testing Lumen lighting and Nanite geometry fidelity.",
+      "uploadDate": "2026-11-01",
+      "status": "Analysis Pending"
+    },
+    {
+      "title": "CCV_Lyrics",
+      "fileName": "Chekka Chivantha Vaanam - Mazhai Kuruvi Lyric (Tamil) _ @ARRahman  _ Mani Ratnam _ Vairamuthu.mp4\"",
+      "category": "Music",
+      "videoType": "YouTube Shorts",
+      "targetAudience": "General audience",
+      "description": "Lyrical video of Mazhai Kuruvi from the movie \"Chekka Chivantha Vaanam\" sung by AR Rahman",
+      "uploadDate": "2026-11-01",
+      "status": "Ready for Analysis",
+      "id": "1793538552843"
+    },
+    {
+      "title": "Lyrical Video",
+      "fileName": "Chekka Chivantha Vaanam - Mazhai Kuruvi Lyric (Tamil) _ @ARRahman  _ Mani Ratnam _ Vairamuthu.mp4",
+      "category": "Music",
+      "videoType": "YouTube Shorts",
+      "targetAudience": "General audience",
+      "description": "Movie:Chekka Chivantha Vaanam - Song:Mazhai Kuruvi Lyric  _ Sung by:AR Rahman  _ Directed by:Mani Ratnam _ Lyrics:Vairamuthu",
+      "uploadDate": "2026-11-01",
+      "status": "Draft",
+      "id": "1793538699629"
+    }
+  ]
+}
